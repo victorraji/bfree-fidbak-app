@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import ResetPassword from '../views/ResetPassword.vue'
+import LandingPage from '../views/LandingPage.vue'
+import Dashboard from '../views/Dashboard.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +10,18 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: LandingPage
+
+  },
+  {
+    path: '/reset-password',
+    name: 'ResetPassword',
+    component: ResetPassword
+  },
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: Dashboard
   },
   {
     path: '/about',
