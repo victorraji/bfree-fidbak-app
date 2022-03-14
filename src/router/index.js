@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import ResetPassword from '../views/ResetPassword.vue'
 import LandingPage from '../views/LandingPage.vue'
 import Dashboard from '../views/Dashboard.vue'
@@ -11,7 +10,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: LandingPage
+
   },
   {
     path: '/reset-password',
@@ -22,11 +22,6 @@ const routes = [
     path: '/Dashboard',
     name: 'Dashboard',
     component: Dashboard
-  },
-  {
-    path: '/LandingPage',
-    name: 'LandingPage',
-    component: LandingPage
   },
   {
     path: '/about',

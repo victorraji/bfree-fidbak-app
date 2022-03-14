@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="body-image">
-      <!-- <img src="../assets/Frame 51.jpg" alt="A lady sitting behind a laptop"> -->
+      <img src="../assets/Frame 51.jpg" alt="A lady sitting behind a laptop">
     </div>
   </div>
 </template>
