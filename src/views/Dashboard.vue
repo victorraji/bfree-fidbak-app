@@ -63,7 +63,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
                 </div>
             </div>
-    </div>
+        </div>
 </template>
 
 <style scoped>
