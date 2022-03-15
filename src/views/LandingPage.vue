@@ -99,20 +99,7 @@ button{
   background: #00A4DB;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
-  /* align-items: center;
-  padding: 10px 30px;
-  position: relative;
-  width: 430px;
-  height: 68px;
-  left: 0px;
-  top: calc(50% - 68px/2 + 168.5px);
-  background: #00A4DB;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  margin-top: 0;
-  color: #f7f7f7; */
-  /* margin-bottom: 50px; */
-  /* margin: 50px 0px; */
+  color: #f7f7f7;
 }
 
 .body-image{
