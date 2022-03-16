@@ -15,7 +15,7 @@
                 </div>
                 <div class="side-nav">
                     <div class="logo">
-                        <p><img src="../assets/bfreeLogo.jpg" alt="bfree logo"><img src="../assets/fidbak.jpg" alt="fidbak log"></p>
+                        <p><img src="../assets/bfreeLogo.jpg" alt="bfree logo"><img src="../assets/FIDBAK.jpg" alt="fidbak log"></p>
                     </div>
                     <div>
                     <div class="nav-icons">
