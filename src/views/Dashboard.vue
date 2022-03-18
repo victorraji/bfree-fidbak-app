@@ -15,18 +15,19 @@
                 </div>
                 <div class="side-nav">
                     <div class="logo">
-                        <p><img src="../assets/bfreeLogo.jpg" alt="bfree logo"><img src="../assets/FIDBAK.jpg" alt="fidbak log"></p>
+                        <!-- <div> -->
+                            <span class="bfreelogo"></span>
+                            <img src="../assets/FIDBAK.svg" alt="fidbak logo" class="fidbaklogo">
+                        <!-- </di?v> -->
                     </div>
                     <div>
                     <div class="nav-icons">
-                        <p class="home"><font-awesome-icon :icon="['fas', 'house']" class="home-icon"/><router-link to="/LandingPage"><span class="home-text">Home</span></router-link></p>
+                        <p class="home"><font-awesome-icon :icon="['fas', 'house']" class="home-icon"/><span class="home-text">Home</span></p>
                         <p class="feedback"><font-awesome-icon :icon="['fas', 'comments']" class="feedback-icon"/><span class="feedback-text">Feedback</span></p>
                         <p class="notification"><font-awesome-icon :icon="['fas', 'bell']" class="notification-icon" /> <span class="notification-text">Notification</span></p>
                         <p class="report"><font-awesome-icon :icon="['fas', 'bar-chart']" class="report-icon"/><span class="report-text">Report</span></p>
                     </div>
-                    <!-- <div> -->
                         <p class="logout"><font-awesome-icon :icon="['fas', 'sign-out']" class="logout-icon"/><span class="logout-text">Log Out</span></p>
-                    <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -42,12 +43,12 @@
                     <h4 class="header-style">Feedbacks</h4>
                 </div>
                 <div class="recieved-feedback">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium aspernatur</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium aspernatur</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium aspernatur</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium aspernatur</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium aspernatur</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium aspernatur</p>
                 </div>
             </div>
             <div class="note-container">
@@ -55,16 +56,29 @@
                     <h4 class="header-style">Notifications</h4>
                 </div>
                 <div class="recieved-notes">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet officia ullam. Adipisci magni atque, fugiat, aut similique dolor iste eum sint </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium</p>
                 </div>
             </div>
-        </div>
+    </div>
 </template>
+
+<script>
+// export default {
+//   name: 'ResetPassword',
+//   component: {},
+
+//   methods: {
+//     reset () {
+//       this.$router.push('/Reset')
+//     }
+//   }
+// }
+</script>
 
 <style scoped>
 #body{
@@ -80,6 +94,7 @@
     position: absolute;
     width: 232px;
     height: 1024px;
+    height: 156.8147013782542vh;
     left: 0px;
     top: 0px;
     background: #E3F5FB;
@@ -88,9 +103,27 @@
 .logo{
     position: absolute;
     width: 150px;
-    height: 32px;
+    height: 30px;
     left: 24px;
     top: 34px;
+}
+
+.bfreelogo{
+    position: absolute;
+    left: 0%;
+    right: 77.91%;
+    top: 0%;
+    bottom: 0%;
+    background-image: url("../assets/bfreeLogo.svg");
+}
+
+.fidbaklogo{
+    position: absolute;
+    left: 25.77%;
+    right: 0%;
+    top: 22.22%;
+    bottom: 19.44%;
+    background: #E3F5FB;
 }
 
 .nav-icons{
@@ -100,9 +133,9 @@
     padding: 0px;
     position: absolute;
     width: 231px;
-    height: 286px;
+    height: 20px;
     left: 1px;
-    top: 99px;
+    top: 90px;
 }
 
 .home{
@@ -112,7 +145,7 @@
     padding: 40px 0px 40px;
     position: static;
     width: 231px;
-    height: 5px;
+    height: 10px;
     left: 0px;
     top: 0px;
     background: #00A4DB;
@@ -586,6 +619,7 @@
     left: 1px;
     top: 55px;
     margin-top: 30px;
+    line-height: 40px;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -614,6 +648,7 @@
     height: 248px;
     left: 19px;
     top: 55px;
+    line-height: 40px;
     margin-top: 30px;
 }
 
@@ -635,8 +670,4 @@
 p:hover{
     text-decoration: 5px underline #00A4DB;
 }
-
-/* img{
-    background-color: #00A4DB;
-} */
 </style>

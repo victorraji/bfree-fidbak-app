@@ -8,12 +8,12 @@
         <div class="body-text">
           <p class="header-text">Bridging<br> <span>communication gap</span><br> in the company.</p>
           <p class="description-text">A creative platform to encourage effective <span>communication</span> between Account Managers, Engineers and operations team within the organisation.</p>
-          <button> <strong>Get started</strong></button>
+          <router-link to="/dashboard"><button> <strong>Get started</strong></button></router-link>
         </div>
       </div>
     </div>
     <div class="body-image">
-      <!-- <img src="../assets/Frame 51.jpg" alt="A lady sitting behind a laptop"> -->
+      <img src="../assets/landingimage.svg" alt="A lady sitting behind a laptop">
     </div>
   </div>
 </template>
@@ -103,7 +103,7 @@ button{
 }
 
 .body-image{
-    background-image: url("../assets/Frame 51.jpg");
+  /* background-image: url("../assets/landingimage.svg"); */
   position: relative;
   margin-right: 20px auto;
   margin-bottom: 60px;
