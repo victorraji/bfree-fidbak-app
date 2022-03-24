@@ -58,24 +58,89 @@
 <!-- complaint box -->
 <form>
 <div class="complaintBox">
-<div><p>Fill the form below to submit your complaints or issues</p></div>
+<div class="text1"><p>Fill the form below to submit your complaints or issues</p></div>
 <!-- first dropdown -->
 <div class="departmentBox">
 <div class="frame96">
-<Select name="Department">
-<option>Account Manager</option>
+<div id="dropdownlist">
+<ejs-dropdownlist :data-source='localData' :fields='localField' placeholder="Department">
 
-</Select>
+</ejs-dropdownlist>
+</div>
 </div>
 </div>
 <!-- 2nd dropdown -->
-<div></div>
+<div class="receivingDepartment">
+<div class="frame962">
+<div id="dropdownlist2">
+<ejs-dropdownlist :datasource='localData' :fields='localField' placeholder="Receiving Department">
+
+</ejs-dropdownlist>
 </div>
+</div>
+</div>
+</div>
+<!-- textarea -->
+<div class="text2"><p>What are your challenges?</p></div>
+<div>
+<label for="textarea1"></label>
+<textarea class="text3"></textarea>
+</div>
+<div class="input1">
+<label for="submit"></label>
+<input type="submit" value="Submit Complaint Now"></div>
 </form>
 <!-- create poll box -->
 <div class="pollBox">
+<div class="textEngage"><p>Create a poll for your team and engage in one below</p></div>
+<!-- form for option boxes -->
+<form>
+<!-- ist box -->
+<div class="createInput">
+<div>
+<label for="text" id="pollIn"></label>
+<input value="create a Poll">
+</div>
 
 </div>
+<!-- 2nd box -->
+<div class="tNQInput">Topic or Question</div>
+<div class="tNQInputBox">
+<label for="text"></label>
+<input type="text">
+</div>
+<!-- 3rd box -->
+<div class="option1">Option 1</div>
+<div class="option1Box">
+<label for="text"></label>
+<input type="text">
+</div>
+<!-- 4th -->
+<div class="option2">Option 2</div>
+<div class="option2Box">
+<label for="text"></label>
+<input type="text">
+</div>
+<!-- 5th -->
+<div class="option3">Option 3 (optional)</div>
+<div class="option3Box">
+<label for="text"></label>
+<input type="text">
+</div>
+<!-- 6th -->
+<div class="option4">Option 4 (optional)</div>
+<div class="option4Box">
+<label for="text"></label>
+<input type="text">
+</div>
+<!-- create poll submit button -->
+<div class="input2">
+<label for="submit"></label>
+<input type="submit" value="Create Poll"></div>
+</form>
+<!-- ending tag for poll box -->
+</div>
+<!-- ending tag for both complaint and poll boxes -->
 </div>
 
 <!-- nav container -->
@@ -83,10 +148,10 @@
 <!-- logo div -->
 <div class="logo">
 <div class="bfreeLogo">
-<img src="..\assets\bfreeLogo.jpg">
+<img src="..\assets\bfreeLogo.png" alt="bfreelogo">
 </div>
 <div class="fidbakLogo">
-<img src="..\assets\fidbak.jpg" alt="logo">
+<img src="..\assets\fidbak.png" alt="logo">
 </div>
 </div>
 <div class="frame59">
@@ -95,7 +160,7 @@
 <div class="homeIcon">
 <font-awesome-icon :icon="['fas', 'home']"/>
 </div>
-<div class="homeP"><p>Home</p></div>
+<router-link to="dashboard"><div class="homeP"><p>Home</p></div></router-link>
 </div>
 <!-- feedBackbar -->
 <div class="feedbackBar">
@@ -127,14 +192,40 @@
 </div>
 </div>
 </div>
-
 </template>
+<script>
+import vue from 'vue'
+import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns'
+vue.use(DropDownListPlugin)
+export default vue.extend({
+  data: function () {
+    return {
+      localData: [
+        { Id: 'team1', Level: 'Account Manager' },
+        { Id: 'team2', Level: 'TeamLead-Branch' },
+        { Id: 'team3', Level: 'TeamLead-Fairmoney' },
+        { Id: 'team4', Level: 'TeamLead-Kuda' },
+        { Id: 'team5', Level: 'TeamLead-Carbon' },
+        { Id: 'team6', Level: 'TeamLead-Quickcheck' },
+        { Id: 'team7', Level: 'TeamLead-Growth' },
+        { Id: 'team8', Level: 'TeamLead-Float' },
+        { Id: 'team9', Level: 'Operations-HR' },
+        { Id: 'team10', Level: 'Operations-QA' },
+        { Id: 'team11', Level: 'Operations-Head' },
+        { Id: 'team12', Level: 'Engineering' }
+      ],
+      localField: { value: 'Id', text: 'Level' }
+    }
+  }
+})
 
+</script>
 <style >
 *{
 margin: 0px;
 Padding: 0px;
 }
+@import url(https://cdn.syncfusion.com/ej2/material.css);
 /*styling for the overall page*/
 .feedbackMain {
 position: relative;
@@ -737,6 +828,144 @@ top: 15px;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.text1 {
+position: absolute;
+width: 490px;
+height: 26px;
+left: 26px;
+top: 32px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 17.5px;
+line-height: 26px;
+color: #000000;
+}
+.departmentBox {
+position: absolute;
+width: 475px;
+height: 45px;
+left: 24px;
+top: 93px;
+}
+.frame96 {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+position: absolute;
+width: 475px;
+height: 44px;
+left: 0px;
+top: 0px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#dropdownlist {
+width: 475px;
+height: 44px;
+left: 0px;
+top: 0px;
+background: #FFFFFF;
+border-radius: 5px 5px 0px 0px;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 6px 0px;
+}
+/*styling for 2nd drop down*/
+
+.receivingDepartment {
+position: absolute;
+width: 477px;
+height: 46px;
+left: 24px;
+top: 149px;
+}
+.frame962 {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+position: absolute;
+width: 475px;
+height: 44px;
+left: 0px;
+top: 0px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#dropdownlist2 {
+width: 475px;
+height: 44px;
+left: 0px;
+top: 0px;
+background: #FFFFFF;
+border-radius: 5px 5px 0px 0px;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 6px 0px;
+}
+/*styling for text area*/
+.text2 {
+position: absolute;
+width: 216px;
+height: 24px;
+left: 27px;
+top: 220px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #000000;
+}
+.text3 {
+position: absolute;
+width: 475px;
+height: 373px;
+left: 40px;
+top: 249px;
+background: #F7F7F7;
+border: 2px solid rgba(0, 0, 0, 0.28);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.input1 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+position: absolute;
+width: 294px;
+height: 32px;
+left: 116px;
+top: 655px;
+background-color: #00A4DB;
+border-radius: 5px;
+}
+.input1 input {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+width: 187px;
+height: 24px;
+left: 53.5px;
+top: 4px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+position: static;
+border: none;
+background: #00A4DB;
+}
+/*styling for poll box*/
 .pollBox {
 position: absolute;
 width: 531px;
@@ -746,4 +975,191 @@ top: 15px;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.textEngage {
+position: absolute;
+width: 450px;
+height: 24px;
+left: 17px;
+top: 32px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #000000;
+}
+/*styling for option boxes*/
+.tNQInput {
+position: absolute;
+width: 159px;
+height: 27px;
+left: 19px;
+top: 160px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+}
+.tNQInputBox input {
+position: absolute;
+width: 485px;
+height: 44px;
+left: 19px;
+top: 192px;
+background: #F7F7F7;
+border: 2px solid rgba(0, 0, 0, 0.28);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.option1 {
+position: absolute;
+width: 72px;
+height: 27px;
+left: 20px;
+top: 254px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+}
+.option1Box input{
+position: absolute;
+width: 485px;
+height: 44px;
+left: 17px;
+top: 286px;
+background: #F7F7F7;
+border: 2px solid rgba(0, 0, 0, 0.28);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.option2 {
+position: absolute;
+width: 76px;
+height: 27px;
+left: 20px;
+top: 348px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+}
+.option2Box input{
+position: absolute;
+width: 485px;
+height: 44px;
+left: 17px;
+top: 383px;
+background: #F7F7F7;
+border: 2px solid rgba(0, 0, 0, 0.28);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.option3 {
+position: absolute;
+width: 174px;
+height: 27px;
+left: 20px;
+top: 442px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+}
+.option3Box input {
+position: absolute;
+width: 485px;
+height: 44px;
+left: 19px;
+top: 474px;
+background: #F7F7F7;
+border: 2px solid rgba(0, 0, 0, 0.28);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.option4 {
+position: absolute;
+width: 175px;
+height: 27px;
+left: 20px;
+top: 536px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+
+}
+.option4Box input {
+position: absolute;
+width: 485px;
+height: 44px;
+left: 17px;
+top: 571px;
+background: #F7F7F7;
+border: 2px solid rgba(0, 0, 0, 0.28);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.createInput input {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+position: absolute;
+width: 485px;
+height: 44px;
+left: 19px;
+top: 88px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+color: rgba(0, 0, 0, 0.42);
+}
+.input2 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+position: absolute;
+width: 294px;
+height: 32px;
+left: 113px;
+top: 654px;
+background: #00A4DB;
+border-radius: 5px;
+}
+.input2 input {
+position: static;
+width: 99px;
+height: 27px;
+left: 97.5px;
+top: 2.5px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+background: #00A4DB;
+border: none;
+}
+
 </style>

@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/LandingPage">Landing Page</router-link>
       <router-link to="/Dashboard">Dashboard</router-link>
+      <router-link to="/signin">signin</router-link>
       </div>
     <router-view/>
   </div>
