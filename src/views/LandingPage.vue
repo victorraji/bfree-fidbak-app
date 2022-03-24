@@ -8,7 +8,7 @@
         <div class="body-text">
           <p class="header-text">Bridging<br> <span>communication gap</span><br> in the company.</p>
           <p class="description-text">A creative platform to encourage effective <span>communication</span> between Account Managers, Engineers and operations team within the organisation.</p>
-          <router-link to="/signin"><button> <strong>Get started</strong></button></router-link>
+          <router-link to="/signin"><button><strong>Get started</strong></button></router-link>
         </div>
       </div>
     </div>
