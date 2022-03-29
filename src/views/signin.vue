@@ -31,14 +31,14 @@
 </label>
 <div class="inputBox button">
 <a href="">
-<input type="submit" value="Log in">
+<router-link to="/Dashboard"><input type="submit" value="Log in"></router-link>
 </a>
 </div>
 </div>
 </form>
 <div class="lowerClass">
 <div class="forgotPassword">
-<p class="word">Forgot password?</p>
+<p class="word"><router-link to="/ResetPassword">Forgot password?</router-link></p>
 </div>
 <div class="reset">
 <a href="#" class="resetLink">Reset password</a>

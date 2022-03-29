@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style scooped>
+<style scoped>
 *{
   margin: 0;
   padding: 0;

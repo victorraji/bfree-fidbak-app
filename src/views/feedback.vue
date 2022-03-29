@@ -78,10 +78,11 @@
 </div>
 </div>
 
+<the-header />
 <!-- nav container -->
-<div class="navContainer">
+<!-- <div class="navContainer"> -->
 <!-- logo div -->
-<div class="logo">
+<!-- <div class="logo">
 <div class="bfreeLogo">
 <img src="..\assets\bfreeLogo.jpg">
 </div>
@@ -89,23 +90,23 @@
 <img src="..\assets\fidbak.jpg" alt="logo">
 </div>
 </div>
-<div class="frame59">
+<div class="frame59"> -->
 <!-- homebar -->
-<div class="homeBar">
+<!-- <div class="homeBar">
 <div class="homeIcon">
 <font-awesome-icon :icon="['fas', 'home']"/>
 </div>
 <div class="homeP"><p>Home</p></div>
-</div>
+</div> -->
 <!-- feedBackbar -->
-<div class="feedbackBar">
+<!-- <div class="feedbackBar">
 <div class="feedbackIcon">
 <font-awesome-icon :icon="['fas', 'user']"/>
 </div>
 <div class="feedbackP"><p>Feedback</p></div>
-</div>
+</div> -->
 <!-- notification bar -->
-<div class="notificationBar">
+<!-- <div class="notificationBar">
 <div class="notificationIcon">
 <font-awesome-icon :icon="['fas', 'bell']"/>
 </div>
@@ -124,11 +125,22 @@
 </div>
 <button class="logOutP">Log Out</button>
 </div>
-</div>
+</div> -->
 </div>
 </div>
 
 </template>
+
+<script>
+import TheHeader from "@/components/navbar/TheHeader.vue";
+
+export default {
+  name: "feedback",
+  components: {
+    TheHeader,
+  },
+};
+</script>
 
 <style >
 *{

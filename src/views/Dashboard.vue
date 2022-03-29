@@ -17,7 +17,7 @@
                     <div class="logo">
                         <!-- <div> -->
                             <span class="bfreelogo"></span>
-                            <img src="../assets/FIDBAK.svg" alt="fidbak logo" class="fidbaklogo">
+                            <img src="../assets/fidbak.jpg" alt="fidbak logo" class="fidbaklogo">
                         <!-- </di?v> -->
                     </div>
                     <div>
@@ -68,25 +68,25 @@
 </template>
 
 <script>
-// export default {
-//   name: 'ResetPassword',
-//   component: {},
+export default {
+  name: 'ResetPassword',
+  component: {},
 
-//   methods: {
-//     reset () {
-//       this.$router.push('/Reset')
-//     }
-//   }
-// }
+  methods: {
+    reset () {
+      this.$router.push('src/views/ResetPassword.vue')
+    }
+  }
+}
 </script>
 
 <style scoped>
 #body{
     position: relative;
-    /* width: 1440px; */
-    width: 106.03829160530192vw;
-    /* height: 1024px; */
-    height: 156.8147013782542vh;
+    width: 1440px;
+    /* width: 106.03829160530192vw; */
+    height: 1024px;
+    /* height: 156.8147013782542vh; */
     background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
 }
 
@@ -94,7 +94,7 @@
     position: absolute;
     width: 232px;
     height: 1024px;
-    height: 156.8147013782542vh;
+    /* height: 156.8147013782542vh; */
     left: 0px;
     top: 0px;
     background: #E3F5FB;
@@ -106,6 +106,7 @@
     height: 30px;
     left: 24px;
     top: 34px;
+    color: #E3F5FB;
 }
 
 .bfreelogo{
@@ -659,15 +660,15 @@
     text-align: start;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 16px;
-    text-transform:capitalize;
-    line-height: 24px;
+    justify-content: center;
+    line-height: 55px;
     color: #F7F7F7;
     margin-left: 20px;
 }
 
-p:hover{
+/* p:hover{
     text-decoration: 5px underline #00A4DB;
-}
+} */
 </style>
