@@ -6,6 +6,7 @@ import LandingPage from '../views/LandingPage.vue'
 import Dashboard from '../views/Dashboard.vue'
 import signin from '../views/signin.vue'
 import feedback from '../views/feedback.vue'
+import not from '../views/not.vue'
 
 Vue.use(VueRouter)
 
@@ -26,9 +27,9 @@ const routes = [{
   component: ResetPassword
 },
 {
-  path: '/Dashboard',
-  name: 'Dashboard',
-  component: Dashboard
+  path: '/not',
+  name: 'not',
+  component: not
 },
 {
   path: '/feedback',
