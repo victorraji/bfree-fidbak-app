@@ -30,9 +30,10 @@
 </div>
 </label>
 <div class="inputBox button">
-<a href="">
 <router-link to="/Dashboard"><input type="submit" value="Log in"></router-link>
-</a>
+<router-link to="/Dashboard">
+<input type="submit" value="Log in">
+</router-link>
 </div>
 </div>
 </form>
@@ -41,7 +42,7 @@
 <p class="word"><router-link to="/ResetPassword">Forgot password?</router-link></p>
 </div>
 <div class="reset">
-<a href="#" class="resetLink">Reset password</a>
+<router-link to="ResetPassword"><a href="#" class="resetLink">Reset password</a></router-link>
 </div>
 </div>
 <p class="signUp">Don't have an account?</p>

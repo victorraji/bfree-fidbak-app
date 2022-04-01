@@ -1,5 +1,5 @@
 <template>
-    <div id="body">
+    <div class="body">
             <!-- this is the side nav bar container -->
             <div class="nav">
                 <div class="top-nav">
@@ -81,12 +81,10 @@ export default {
 </script>
 
 <style scoped>
-#body{
+.body{
     position: relative;
     width: 1440px;
-    /* width: 106.03829160530192vw; */
     height: 1024px;
-    /* height: 156.8147013782542vh; */
     background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
 }
 
@@ -94,7 +92,6 @@ export default {
     position: absolute;
     width: 232px;
     height: 1024px;
-    /* height: 156.8147013782542vh; */
     left: 0px;
     top: 0px;
     background: #E3F5FB;
