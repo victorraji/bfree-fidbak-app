@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="container">
       <div>
           <img src="" alt="">
           <img src="" alt="">
