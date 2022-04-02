@@ -1,0 +1,378 @@
+<template>
+<div class="nav" id="myHeader">
+    <div class="top-nav">
+        <h3 class="hello-Bolade">Hello Bolade!</h3>
+            <!-- placeholder for icons -->
+        <div class="icons">
+            <font-awesome-icon :icon="['fas', 'search']" class="search-icon"/>
+            <font-awesome-icon :icon="['fas', 'bell']" class="bell"/>
+            <font-awesome-icon :icon="['fas', 'user-circle']" class="profile-icon"/>
+            <font-awesome-icon :icon="['fas', 'fa-cog']" class="settings-icon"/>
+        </div>
+    </div>
+        <!-- side navigation -->
+    <div class="side-nav">
+        <div class="logo">
+                <span class="bfreelogo"></span>
+                <img src="../../assets/fidbak.jpg" alt="fidbak logo" class="fidbaklogo">
+        </div>
+        <div>
+        <div class="nav-icons">
+            <p class="home"><font-awesome-icon :icon="['fas', 'house']" class="home-icon"/><span class="home-text">Home</span></p>
+            <p class="feedback"><font-awesome-icon :icon="['fas', 'comments']" class="feedback-icon"/><span class="feedback-text">Feedback</span></p>
+            <p class="notification"><font-awesome-icon :icon="['fas', 'bell']" class="notification-icon" /> <span class="notification-text">Notification</span></p>
+            <p class="report"><font-awesome-icon :icon="['fas', 'bar-chart']" class="report-icon"/><span class="report-text">Report</span></p>
+        </div>
+            <p class="logout"><font-awesome-icon :icon="['fas', 'sign-out']" class="logout-icon"/><span class="logout-text">Log Out</span></p>
+        </div>
+    </div>
+</div>
+</template>
+
+//JS
+<script>
+// eslint-disable-next-line no-undef
+// window.onscroll = function () { myFunction() }
+// var nav = document.getElementById('myHeader')
+// var sticky = nav.offsetTop
+
+export default {
+  name: 'HomeHeader'
+
+//   methods: {
+//     myFunction () {
+//       if (window.pageYoffset > sticky) {
+//         this.nav.classList.add('sticky')
+//       } else {
+//         this.nav.classList.remove('sticky')
+//       }
+//     }
+//   }
+}
+</script>
+
+//STYLE
+<style scoped>
+*{
+    padding: 0;
+    margin: 0;
+}
+.side-nav{
+    position: fixed;
+    width: 232px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    background: #E3F5FB;
+}
+.logo{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 24px;
+    top: 34px;
+    color: #E3F5FB;
+}
+.bfreelogo{
+    position: absolute;
+    left: 0%;
+    right: 77.91%;
+    top: 0%;
+    bottom: 0%;
+    background-image: url("../../assets/bfreeLogo.svg");
+}
+.fidbaklogo{
+    position: absolute;
+    left: 25.77%;
+    right: 0%;
+    top: 22.22%;
+    bottom: 19.44%;
+    background: #E3F5FB;
+}
+.nav-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 231px;
+    height: 20px;
+    left: 1px;
+    top: 90px;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0px 40px;
+    position: static;
+    width: 231px;
+    height: 10px;
+    left: 0px;
+    top: 0px;
+    background: #00A4DB;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+.home-icon{
+    position: static;
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    top: 24px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.home-text{
+    position: static;
+    width: 48px;
+    height: 24px;
+    left: 67px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.feedback{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0px 40px;
+    position: static;
+    width: 231px;
+    height: 16px;
+    left: 0px;
+    top: 74px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+.feedback-icon{
+    position: static;
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    top: 24px;
+    color: #00A4DB;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.feedback-text{
+    position: static;
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    top: 24px;
+    color: #00A4DB;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.notification{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0px 40px;
+    position: static;
+    width: 231px;
+    height: 16px;
+    left: 0px;
+    top: 148px;
+    color: #00A4DB;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+.notification-icon{
+    position: static;
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    top: 24px;
+    color: #00A4DB;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.notification-text{
+    position: static;
+    width: 102px;
+    height: 24px;
+    left: 67px;
+    top: 20px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 18px;
+}
+.report{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0px 40px;
+    position: static;
+    width: 231px;
+    height: 64px;
+    left: 0px;
+    top: 222px;
+    color: #00A4DB;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+.report-icon{
+    position: static;
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    top: 24px;
+    color: #00A4DB;;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.report-text{
+    position: static;
+    width: 62px;
+    height: 24px;
+    left: 67px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #00A4DB;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.logout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0px 40px;
+    position: absolute;
+    width: 232px;
+    height: 64px;
+    left: 0px;
+    top: 893px;
+}
+.logout-icon{
+    position: static;
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    top: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.logout-text{
+    position: static;
+    left: 28.88%;
+    right: 44.4%;
+    top: 31.25%;
+    bottom: 31.25%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.71);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+.top-nav{
+    position: fixed;
+    width: 1440px;
+    height: 99px;
+    left: 0px;
+    top: 0px;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.hello-Bolade{
+    position: absolute;
+    width: 149px;
+    height: 33px;
+    left: 274px;
+    top: 34px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    justify-content: center;
+    line-height: 33px;
+    color: #000000;
+}
+.icons{
+    position: absolute;
+    width: 311px;
+    height: 63px;
+    left: 1088px;
+    top: 20px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+}
+.search-icon{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 30px;
+    top: 19.5px;
+}
+.bell{
+    position: absolute;
+    width: 24px;
+    height: 32px;
+    left: 104px;
+    top: 11px;
+}
+.profile-icon{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 183px;
+    top: 19.5px;
+    box-sizing: border-box;
+}
+.settings-icon{
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: 257px;
+    top: 17.5px;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky +.content{
+    padding-top: 45px;
+}
+</style>

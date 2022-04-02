@@ -7,6 +7,7 @@ import Dashboard from '../views/Dashboard.vue'
 import signin from '../views/signin.vue'
 import feedback from '../views/feedback.vue'
 import not from '../views/not.vue'
+import DashboardResponder from '../views/DashboardResponder.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [{
   path: '/Dashboard',
   name: 'Dashboard',
   component: Dashboard
+},
+{
+  path: '/DashboardResponder',
+  name: 'DashboardResponder',
+  component: DashboardResponder
 },
 {
   path: '/LandingPage',
