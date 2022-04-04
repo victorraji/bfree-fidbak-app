@@ -1,7 +1,7 @@
 <template>
   <div class="rectangle29">
 <div class="topIcons">
-<div class="boladeT"><p>Hello Bolade!</p></div>
+<div class="boladeT"><p>Hello Boladde!</p></div>
 <!-- top detail icons -->
 <div class="frame53">
 <div class="searchIcon">
