@@ -8,7 +8,7 @@
                             <!-- placeholder for icons -->
                         <font-awesome-icon :icon="['fas', 'search']" class="search-icon"/>
                         <font-awesome-icon :icon="['fas', 'bell']" class="bell"/>
-                        <font-awesome-icon :icon="['fas', 'user-circle']" class="profile-icon"/>
+                        <!-- <font-awesome-icon :icon="['fas', 'user-circle']" class="profile-icon"/> -->
                             <!-- replace line below with appropriate icon -->
                         <font-awesome-icon :icon="['fas', 'fa-cog']" class="settings-icon"/>
                     </div>
