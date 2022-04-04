@@ -2,7 +2,9 @@
   <div class="home">
   <Header/>
 <Navbar/>
-
+<div>
+<p> New</p>
+</div>
   </div>
 </template>
 
