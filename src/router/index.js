@@ -8,6 +8,7 @@ import signin from '../views/signin.vue'
 import feedback from '../views/feedback.vue'
 import not from '../views/not.vue'
 import DashboardResponder from '../views/DashboardResponder.vue'
+import Report from '../views/Report.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [{
   path: '/LandingPage',
   name: 'LandingPage',
   component: LandingPage
+},
+{
+  path: '/Report',
+  name: 'Report',
+  component: Report
 },
 {
   path: '/about',

@@ -1,7 +1,7 @@
 <template>
 <div class="nav" id="myHeader">
     <div class="top-nav">
-        <h3 class="hello-Bolade">Hello Bolade!</h3>
+        <h3 class="greet">Hello Ifeanyi!</h3>
             <!-- placeholder for icons -->
         <div class="icons">
             <font-awesome-icon :icon="['fas', 'search']" class="search-icon"/>
@@ -18,10 +18,10 @@
         </div>
         <div>
         <div class="nav-icons">
-            <div class="home"><font-awesome-icon :icon="['fas', 'house']" class="home-icon"/><router-link to="/" class="home-text">Home</router-link></div>
-            <p class="feedback"><font-awesome-icon :icon="['fas', 'comments']" class="feedback-icon"/><router-link to="/feedback" class="feedback-text">Feedback</router-link></p>
-            <p class="notification"><font-awesome-icon :icon="['fas', 'bell']" class="notification-icon" /> <router-link to="/not" class="notification-text">Notification</router-link></p>
-            <p class="report"><font-awesome-icon :icon="['fas', 'bar-chart']" class="report-icon"/><router-link class="report-text">Report</router-link></p>
+            <p class="home"><font-awesome-icon :icon="['fas', 'house']" class="home-icon"/><span class="home-text">Home</span></p>
+            <p class="feedback"><font-awesome-icon :icon="['fas', 'comments']" class="feedback-icon"/><span class="feedback-text">Feedback</span></p>
+            <p class="notification"><font-awesome-icon :icon="['fas', 'bell']" class="notification-icon" /> <span class="notification-text">Notification</span></p>
+            <p class="report"><font-awesome-icon :icon="['fas', 'bar-chart']" class="report-icon"/><span class="report-text">Report</span></p>
         </div>
             <p class="logout"><font-awesome-icon :icon="['fas', 'sign-out']" class="logout-icon"/><span class="logout-text">Log Out</span></p>
         </div>
@@ -37,7 +37,7 @@
 // var sticky = nav.offsetTop
 
 export default {
-  name: 'HomeHeader'
+  name: 'ResponderHeader'
 
 //   methods: {
 //     myFunction () {
@@ -315,7 +315,7 @@ export default {
     background: #F7F7F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.hello-Bolade{
+.greet{
     position: absolute;
     width: 149px;
     height: 33px;

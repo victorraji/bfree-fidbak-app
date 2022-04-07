@@ -1,7 +1,7 @@
 <template>
     <div class="body">
             <!-- this is the side nav bar container -->
-            <HomeHeader/>
+            <resonderHeader/>
         <div class="main-body">
             <div class="user-details">
                 <h5 class="staff"><span class="dept">Department</span><br> <strong class="id">Enginering</strong></h5>
@@ -32,13 +32,13 @@
 </template>
 
 <script>
-import HomeHeader from '@/components/navbar/HomeHeader.vue'
+import responderHeader from '@/components/navbar/responderHeader.vue'
 
 export default {
   name: 'HeaderView',
 
   components: {
-    HomeHeader
+    responderHeader
   }
 }
 </script>

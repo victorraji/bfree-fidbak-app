@@ -31,9 +31,9 @@
 </label>
 <div class="inputBox button">
 <router-link to="/Dashboard"><input type="submit" value="Log in"></router-link>
-<router-link to="/Dashboard">
+<!-- <router-link to="/Dashboard">
 <input type="submit" value="Log in">
-</router-link>
+</router-link> -->
 </div>
 </div>
 </form>
