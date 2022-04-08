@@ -9,6 +9,7 @@ import feedback from '../views/feedback.vue'
 import not from '../views/not.vue'
 import DashboardResponder from '../views/DashboardResponder.vue'
 import Report from '../views/Report.vue'
+import ReportEngage from '../views/ReportEngage.vue'
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,11 @@ const routes = [{
   path: '/Dashboard',
   name: 'Dashboard',
   component: Dashboard
+},
+{
+  path: '/ReportEngage',
+  name: 'ReportEngage',
+  component: ReportEngage
 },
 {
   path: '/DashboardResponder',

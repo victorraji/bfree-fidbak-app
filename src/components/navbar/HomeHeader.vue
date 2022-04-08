@@ -1,4 +1,5 @@
 <template>
+<nav>
 <div class="nav" id="myHeader">
     <div class="top-nav">
         <h3 class="hello-Bolade">Hello Bolade!</h3>
@@ -27,6 +28,7 @@
         </div>
     </div>
 </div>
+</nav>
 </template>
 
 //JS
@@ -56,6 +58,11 @@ export default {
 *{
     padding: 0;
     margin: 0;
+}
+nav{
+    position: sticky;
+    top: 0;
+    /* left: 0; */
 }
 .side-nav{
     position: fixed;
@@ -366,13 +373,5 @@ export default {
     height: 27px;
     left: 257px;
     top: 17.5px;
-}
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.sticky +.content{
-    padding-top: 45px;
 }
 </style>

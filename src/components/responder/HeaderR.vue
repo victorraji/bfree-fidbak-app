@@ -28,16 +28,21 @@ export default {
 }
 </script>
 <style scoped>
+header{
+  position: sticky;
+  top: 0;
+}
 .headerBlock {
 display: flex;
 justify-content: space-between;
+/* position: fixed; */
+mask-position: fixed;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-height: 99px;
+height: 15.06vh;
 align-items: center;
-margin: 10px 250px;
-width: 1110px;
-/* overflow-x: hidden; */
+margin: 0 250px;
+width: 93.42vw;
 }
 .headerI {
 color: #000000;

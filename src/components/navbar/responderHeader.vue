@@ -37,7 +37,7 @@
 // var sticky = nav.offsetTop
 
 export default {
-  name: 'ResponderHeader'
+//   name: 'ResponderHeader'
 
 //   methods: {
 //     myFunction () {
