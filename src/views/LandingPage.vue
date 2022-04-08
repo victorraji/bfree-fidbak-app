@@ -1,19 +1,19 @@
 <template>
-  <div id="app">
-    <div class="all-text">
+  <div class="container">
+    <div class="text-wrapper">
       <div class="logo-holder">
-        <img src="../assets/logo.jpg" alt="fidbak logo">
+        <img src="../assets/logo.png" alt="fidbak logo">
       </div>
       <div class="pages-body">
         <div class="body-text">
-          <p class="header-text">Bridging<br> <span>communication gap</span><br> in the company.</p>
+          <p class="header-text">Bridging<br> <span>communication gap</span><br> in the organisation.</p><br><br><br>
           <p class="description-text">A creative platform to encourage effective <span>communication</span> between Account Managers, Engineers and operations team within the organisation.</p>
-          <router-link to="/signin"><button><strong>Get started</strong></button></router-link>
+          <router-link to="/signin" style="text-decoration: none; color: inherit"><button><strong>Get started</strong></button></router-link>
         </div>
       </div>
     </div>
     <div class="body-image">
-      <img src="../assets/landingimage.svg" alt="A lady sitting behind a laptop">
+      <img src="../assets/newlanding.svg" alt="A lady sitting behind a laptop">
     </div>
   </div>
 </template>
@@ -21,42 +21,39 @@
 // STYLE
 <style scoped>
 *{
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-#app {
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
-  margin: 0px auto;
+  grid-column-gap: 10px;
+  overflow-x: hidden;
   position: fixed;
 }
-
-.all-text{
+.text-wrapper{
   display: grid;
   grid-template-rows: 1fr 5fr;
-  margin-left: 70px;
-  margin-bottom: 100px;
+  /* margin-left: 70px; */
+  padding: 0 10% 100% 10%;
+  /* margin-bottom: 100px; */
 }
-
 .logo-holder{
-  /* margin-left: 100px; */
   margin-top: 30px;
   text-align: start;
 }
 
 .pages-body{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-items: start;
-  position: relative;
-  grid-gap: none;
+  /* grid-gap: 5%; */
 }
 
 /* Bridging communication gap in the company */
@@ -67,19 +64,17 @@ padding: 0;
   font-size: 45px;
   line-height: 55px;
   text-align: start;
-  margin-top: 80px;
+  margin-top: 15%;
 }
-
 span{
   color: #00A4DB;
 }
-
 .description-text{
-  position: static;
+  /* position: static; */
   width: 430px;
   height: 72px;
-  left: 0px;
-  top: 215px;
+  /* left: 0px;
+  top: 215px; */
   font-display: open sans;
   font-style: normal;
   font-weight: 600px;
@@ -87,7 +82,6 @@ span{
   line-height: 25px;
   color: #000000;
   text-align: start;
-  /* margin: 50px 0px; */
 }
 
 button{
@@ -95,22 +89,20 @@ button{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 30px;
-  /* position: absolute; */
-  width: 432px;
-  height: 60px;
+  padding: 5% 10%;
+  width: 380px;
+  height: 55px;
   left: 0px;
-  top: calc(50% - 60px/2 + 174.5px);
+  margin-top: 10%;
   background: #00A4DB;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   color: #f7f7f7;
 }
 
 .body-image{
-  /* background-image: url("../assets/landingimage.svg"); */
   position: relative;
-  margin-right: 20px auto;
-  margin-bottom: 60px;
+  margin-left: 60px;
+  background: rgba(181, 215, 227, 0.31);;
 }
 </style>

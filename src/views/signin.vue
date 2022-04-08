@@ -7,7 +7,7 @@
 </div>
 <div class="mainblock">
 <div class="pageimage">
-<img src="../assets/landing image.png" alt="pageimage" class="image2">
+<!-- <img src="../assets/landing image.png" alt="pageimage" class="image2"> -->
 </div>
 <div class="pnform">
 <div class="firstPara">
@@ -31,9 +31,9 @@
 </label>
 <div class="inputBox button">
 <router-link to="/Dashboard"><input type="submit" value="Log in"></router-link>
-<router-link to="/Dashboard">
+<!-- <router-link to="/Dashboard">
 <input type="submit" value="Log in">
-</router-link>
+</router-link> -->
 </div>
 </div>
 </form>
