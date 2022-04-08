@@ -7,7 +7,7 @@
 </div>
 <div class="mainblock">
 <div class="pageimage">
-<img src="../assets/landing image.png" alt="pageimage" class="image2">
+<!-- <img src="../assets/landing image.png" alt="pageimage" class="image2"> -->
 </div>
 <div class="pnform">
 <div class="firstPara">

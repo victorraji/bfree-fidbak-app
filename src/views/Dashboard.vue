@@ -69,13 +69,13 @@
 </template>
 
 <script>
-import HomeHeader from '@/components/navbar/HomeHeader.vue'
+// import HomeHeader from '@/components/navbar/HomeHeader.vue'
 
 export default {
-  name: 'HeaderView',
+//   name: 'HeaderView',
 
   components: {
-    HomeHeader
+    // HomeHeader
   }
 }
 </script>

@@ -32,13 +32,13 @@
 </template>
 
 <script>
-import responderHeader from '@/components/navbar/responderHeader.vue'
+// import responderHeader from '@/components/navbar/responderHeader.vue'
 
 export default {
   name: 'HeaderView',
 
   components: {
-    responderHeader
+    // responderHeader
   }
 }
 </script>
