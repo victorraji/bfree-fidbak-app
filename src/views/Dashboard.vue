@@ -1,7 +1,37 @@
 <template>
     <div class="container">
             <!-- this is the side nav bar container -->
-            <HomeHeader/>
+
+            <div class="nav">
+                <div class="top-nav">
+                    <h3 class="hello-Bolade">Hello Bolade!</h3>
+                    <div class="icons">
+                            <!-- placeholder for icons -->
+                        <font-awesome-icon :icon="['fas', 'search']" class="search-icon"/>
+                        <font-awesome-icon :icon="['fas', 'bell']" class="bell"/>
+                        <!-- <font-awesome-icon :icon="['fas', 'user-circle']" class="profile-icon"/> -->
+                            <!-- replace line below with appropriate icon -->
+                        <font-awesome-icon :icon="['fas', 'fa-cog']" class="settings-icon"/>
+                    </div>
+                </div>
+                <div class="side-nav">
+                    <div class="logo">
+                        <!-- <div> -->
+                            <span class="bfreelogo"></span>
+                            <img src="../assets/fidbak.jpg" alt="fidbak logo" class="fidbaklogo">
+                        <!-- </di?v> -->
+                    </div>
+                    <div>
+                    <div class="nav-icons">
+                        <p class="home"><font-awesome-icon :icon="['fas', 'house']" class="home-icon"/><span class="home-text">Home</span></p>
+                        <p class="feedback"><font-awesome-icon :icon="['fas', 'comments']" class="feedback-icon"/><span class="feedback-text">Feedback</span></p>
+                        <p class="notification"><font-awesome-icon :icon="['fas', 'bell']" class="notification-icon" /> <span class="notification-text">Notification</span></p>
+                        <p class="report"><font-awesome-icon :icon="['fas', 'bar-chart']" class="report-icon"/><span class="report-text">Report</span></p>
+                    </div>
+                        <p class="logout"><font-awesome-icon :icon="['fas', 'sign-out']" class="logout-icon"/><span class="logout-text">Log Out</span></p>
+                    </div>
+                </div>
+            </div>
         <div class="main-body">
             <div class="user-details">
                 <h5 class="staff"><span class="staff-id">Staff id</span><br> <strong class="id">BFR00055</strong></h5>
