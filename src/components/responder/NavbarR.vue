@@ -11,20 +11,12 @@
 
 <div class="mainnavBox">
 <ul>
-<li class="active"><a href="/"><div class="homeBar">
+<li><a href="/" class="active"><div class="homeBar">
 <div class="homeIcon">
 <font-awesome-icon :icon="['fas', 'home']"/>
 </div>
 <div class="homeP"><p>Home</p></div>
 </div></a></li>
-<!-- feedBackbar -->
-<li><a href="/"><div class="feedbackBar">
-<div class="feedbackIcon">
-<font-awesome-icon :icon="['fas', 'user']"/>
-</div>
-<div class="feedbackP"><p>Feedback</p></div>
-</div></a></li>
-
 <!-- notification bar -->
 <li><a href="/"><div class="notificationBar">
 <div class="notificationIcon">
@@ -33,14 +25,13 @@
 <div class="notificationP"><p>Notification</p></div>
 </div></a></li>
 <!-- report -->
-<li><a href="/"><div class="reportBar">
+<li><a href="."><div class="reportBar">
 <div class="reportIcon">
 <font-awesome-icon :icon="['fas', 'area-chart']"/>
 </div>
 <div class="reportP"><p>Report</p></div>
 </div></a></li>
 </ul>
-
 </div>
 <!-- logout  -->
 <div>
@@ -57,7 +48,7 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: 'NavbarR',
   data () {
     return {
       hover: true
@@ -78,17 +69,17 @@ justify-content: space-between;
 background: #E3F5FB;
 width: 232px;
 height: 1024px;
-margin-top: -100px;
+
 }
 .logo {
 display: flex;
-margin: 35px 40px;
+padding: 65px 40px;
 }
 .fidbakLogo {
 margin: 6px;
 }
 .mainnavBox {
-margin-top: -600px;
+margin-top: -700px;
 }
 .homeBar {
 display: flex;
@@ -97,6 +88,8 @@ align-items: center;
 padding: 10px 10px 5px 0px;
 width: 231px;
 height: 64px;
+left: 0px;
+top: 0px;
 flex: none;
 order: 0;
 flex-grow: 0;
@@ -136,53 +129,6 @@ order: 1;
 flex-grow: 0;
 margin-left: -20px;
 }
-.feedbackBar{
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 10px 10px 5px 0px;
-width: 231px;
-height: 64px;
-left: 0px;
-top: 0px;
-flex: none;
-order: 1;
-flex-grow: 1;
-margin: 0px 0px;
-}
-.feedbackP{
-position: static;
-width: 48px;
-height: 24px;
-left: 67px;
-top: 20px;
-
-font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-flex: none;
-order: 1;
-flex-grow: 0;
-margin-left: -20px;
-}
-
-.feedbackIcon{
-position: static;
-width: 16px;
-height: 16px;
-left: 25px;
-top: 24px;
-flex: none;
-order: 0;
-flex-grow: 0;
-
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 40px;
-}
 
 .notificationBar{
 display: flex;
@@ -194,8 +140,8 @@ height: 64px;
 left: 0px;
 top: 0px;
 flex: none;
-order: 2;
-flex-grow: 2;
+order: 1;
+flex-grow: 1;
 margin: 0px 0px;
 }
 .notificationIcon {
@@ -240,8 +186,8 @@ height: 64px;
 left: 0px;
 top: 0px;
 flex: none;
-order: 3;
-flex-grow: 3;
+order: 2;
+flex-grow: 2;
 margin: 0px 0px;
 }
 .reportIcon{
@@ -320,6 +266,7 @@ margin: 0px 26px;
 }
 .active, .mainnavBox ul li:hover {
 background-color: #00A4DB;
+
 }
 .mainnavBox ul li a {
 text-decoration: none;

@@ -1,0 +1,119 @@
+<template>
+<div class="main">
+<div class="part1">
+<header>
+<div class="logoImage">
+<img src="../assets/logo.jpg" alt="logo" class="image1">
+</div>
+</header>
+<div class="body-content">
+      <div class="reset-form">
+        <h3 class="frm-content">Enter your valid email address to generate new password</h3>
+        <form>
+
+         <div class="inputBox">
+          <label for="email">
+
+          <input type="email" placeholder="Email Address"  required/>
+
+          </label>
+         </div>
+        </form>
+         <button @click="reset()" class="input">Reset Password</button>
+      </div>
+</div>
+</div>
+<!-- image goes here -->
+<reuseables/>
+</div>
+
+</template>
+
+<script>
+import reuseables from '@/components/responder/reuseables.vue'
+export default {
+  name: 'signinR',
+  components: {
+    reuseables
+  }
+
+}
+</script>
+
+<style scoped>
+    .body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logoImage {
+        margin-right: 200px;
+        padding: 5px;
+    }
+
+    .body-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 80%;
+        width: 90%;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .reset-form {
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .frm-content {
+        padding-left: 20px;
+        margin-left: 30px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 300;
+        font-family: sans-serif;
+        line-height: 25px;
+    }
+
+    .input {
+        width: 419px;
+        height: 65px;
+        left: 0px;
+        top: calc(50%-65px/2+129.5px);
+        background: #00A4DB;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .inputBox input {
+        position: relative;
+        height: 60px;
+        width: 419px;
+        top: 15px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: 2px solid rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-family: Poppins;
+        font-size: 20px;
+        line-height: 30px;
+        padding-left: 45px;
+        margin: 20px;
+    }
+
+    .envelope {
+        position: absolute;
+        width: 14px;
+        left: 90px;
+        bottom: 220px;
+        color: rgba(0, 0, 0, 0.43);
+    }
+</style>
