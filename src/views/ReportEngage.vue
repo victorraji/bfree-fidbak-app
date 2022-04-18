@@ -43,7 +43,7 @@ export default {
     margin: 20px 250px 0 290px;
     width: 93.42vw;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     text-align: start;
 }
 .bfr{

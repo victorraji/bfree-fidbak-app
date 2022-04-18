@@ -17,8 +17,10 @@
         </div>
         </div>
         <div class="reports">
-            <div class="nps"><font-awesome-icon :icon="['fas', 'file']" class="nps-icon"/><br><span class="nps-text">NPS Report</span></div>
-            <div class="poll"><font-awesome-icon :icon="['fas', 'file']" class="poll-icon"/><br><span class="poll-text">Engage Poll</span></div>
+            <div class="nps">
+            <font-awesome-icon :icon="['fas', 'file']" class="nps-icon"/><br><span class="nps-text">NPS Report</span></div>
+            <div class="poll">
+            <font-awesome-icon :icon="['fas', 'file']" class="poll-icon"/><br><span class="poll-text">Engage Poll</span></div>
         </div>
         <div class="main-content">
             <div class="scores">
@@ -99,7 +101,7 @@ export default {
     margin: 20px 250px 0 290px;
     width: 93.42vw;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     text-align: start;
 }
 .bfr{

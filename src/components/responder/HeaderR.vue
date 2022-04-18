@@ -11,12 +11,14 @@
 <font-awesome-icon :icon="['fas', 'user-circle']"/>
 </div>
 <div class="cogIcon">
-<font-awesome-icon :icon="['fas', 'fa-cog']" />
+<font-awesome-icon :icon="['fas', 'fa-cog']"/>
 </div>
 </div>
 </div>
 </header>
+
 </template>
+
 <script>
 export default {
   name: 'HeaderR',
@@ -27,22 +29,16 @@ export default {
   }
 }
 </script>
+
 <style scoped>
-header{
-  position: sticky;
-  top: 0;
-}
 .headerBlock {
 display: flex;
 justify-content: space-between;
-/* position: fixed; */
-mask-position: fixed;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-height: 15.06vh;
+height: 99px;
 align-items: center;
-margin: 0 250px;
-width: 93.42vw;
+margin: -70px -30px;
 }
 .headerI {
 color: #000000;
@@ -51,9 +47,8 @@ font-style: normal;
 padding: 40px;
 }
 .headerIcons {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-justify-content: space-around;
+display: flex;
+justify-content: space-between;
 align-items: center;
 background: rgba(0, 0, 0, 0.08);
 border-radius: 5px;
@@ -62,16 +57,10 @@ width: 311px;
 margin: 30px;
 }
 .searchIcon {
-position: relative;
-padding: 20%;
-/* margin-right: 30px; */
+margin-left: 30px;
 }
-/* .cogIcon {
-position: relative;
-} */
-.userCircle{
-    position: relative;
-    padding-right: 250px;
+.cogIcon {
+margin-right: 30px;
 }
 .notification68I {
 position: relative;
