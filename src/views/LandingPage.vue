@@ -2,7 +2,8 @@
   <div class="container">
     <div class="text-wrapper">
       <div class="logo-holder">
-        <img src="../assets/logo.png" alt="fidbak logo">
+        <img src="../assets/bfreeLogo.png" alt="fidbak logo">
+        <img src="../assets/fidbak.png" alt="fidbak logo">
       </div>
       <div class="pages-body">
         <div class="body-text">

@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .navContainer {
 position: fixed;
 width: 234px;

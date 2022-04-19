@@ -7,9 +7,13 @@ import Dashboard from '../views/Dashboard.vue'
 import signin from '../views/signin.vue'
 import feedback from '../views/feedback.vue'
 import not from '../views/not.vue'
-import DashboardResponder from '../views/DashboardResponder.vue'
+import HomeRView from '../views/HomeRView.vue'
 import Report from '../views/Report.vue'
-import ReportEngage from '../views/ReportEngage.vue'
+import ReportR from '../views/ReportR.vue'
+import Poll from '../views/Poll.vue'
+import PollR from '../views/PollR.vue'
+import Logout from '../views/Logout.vue'
+import LogoutR from '../views/LogoutR.vue'
 
 Vue.use(VueRouter)
 
@@ -40,19 +44,34 @@ const routes = [{
   component: feedback
 },
 {
+  path: '/Logout',
+  name: 'Logout',
+  component: Logout
+},
+{
+  path: '/LogoutR',
+  name: 'LogoutR',
+  component: LogoutR
+},
+{
   path: '/Dashboard',
   name: 'Dashboard',
   component: Dashboard
 },
 {
-  path: '/ReportEngage',
-  name: 'ReportEngage',
-  component: ReportEngage
+  path: '/Poll',
+  name: 'Poll',
+  component: Poll
 },
 {
-  path: '/DashboardResponder',
-  name: 'DashboardResponder',
-  component: DashboardResponder
+  path: '/PollR',
+  name: 'PollR',
+  component: PollR
+},
+{
+  path: '/HomeRView',
+  name: 'HomeRView',
+  component: HomeRView
 },
 {
   path: '/LandingPage',
@@ -63,6 +82,11 @@ const routes = [{
   path: '/Report',
   name: 'Report',
   component: Report
+},
+{
+  path: '/ReportR',
+  name: 'ReportR',
+  component: ReportR
 },
 {
   path: '/about',

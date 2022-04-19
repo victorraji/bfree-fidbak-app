@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-        <Header/>
+        <HeaderR/>
         <TheNav/>
-        <UserDetails/>
+        <UserDetailR/>
         <Togglebar/>
         <div class="main-content">
             <div class="scores">
@@ -51,18 +51,18 @@
 </template>
 
 <script>
-import Header from '@/components/navbar/Header.vue'
+import HeaderR from '@/components/responder/HeaderR.vue'
 import TheNav from '@/components/navbar/TheNav.vue'
-import UserDetails from '@/components/reusables/UserDetails.vue'
+import UserDetailR from '@/components/responder/UserDetailR.vue'
 import Togglebar from '@/components/reusables/Togglebar.vue'
 
 export default {
   name: 'reportR',
 
   components: {
-    Header,
+    HeaderR,
     TheNav,
-    UserDetails,
+    UserDetailR,
     Togglebar
   },
   data () {
@@ -79,7 +79,7 @@ export default {
 <style scoped>
 .container{
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
 }
 .main-content{

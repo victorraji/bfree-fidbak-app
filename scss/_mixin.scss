@@ -1,0 +1,71 @@
+@mixin flex($flex, $justify, $align, $direction) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  @mixin font($size, $weight, $line-height, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+  }
+  @mixin grid($grid, $repeat, $fraction, $x-gap, $y-gap) {
+    display: $grid;
+    grid-template-rows: repeat($repeat, $fraction);
+    grid-gap: $x-gap $y-gap;
+  }
+  
+  $spaces: (1, 2, 3, 4, 5);
+  @each $space in $spaces {
+    .p-#{$space} {
+      padding: #{$space}rem;
+    }
+    .px-#{$space} {
+      padding: 0 #{$space}rem;
+    }
+    .py-#{$space} {
+      padding: #{$space}rem 0;
+    }
+    .pt-#{$space} {
+      padding: #{$space}rem 0 0;
+    }
+    .pr-#{$space} {
+      padding: 0 #{$space}rem 0 0;
+    }
+    .pl-#{$space} {
+      padding: 0 0 0 #{$space}rem;
+    }
+    .pb-#{$space} {
+      padding: 0 0 #{$space}rem;
+    }
+    .m-#{$space} {
+      margin: #{$space}rem;
+    }
+    .mx-#{$space} {
+      margin: 0 #{$space}rem;
+    }
+    .my-#{$space} {
+      margin: #{$space}rem 0;
+    }
+    .mt-#{$space} {
+      margin: #{$space}rem 0 0;
+    }
+    .mr-#{$space} {
+      margin: 0 #{$space}rem 0 0;
+    }
+    .ml-#{$space} {
+      margin: 0 0 0 #{$space}rem;
+    }
+    .mb-#{$space} {
+      margin: 0 0 #{$space}rem;
+    }
+  }
+  $sizes: 40px, 50px, 80px;
+  @each $size in $sizes {
+    .icon-#{$size} {
+      font-size: $size;
+      height: $size;
+      width: $size;
+    }
+  } 

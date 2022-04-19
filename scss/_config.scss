@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+$font-stack: Arial, Helvetica, sans-serif;
+$light-color: #f4f4f4;
+$pri-color: #00A4DB;
+$sec-color: #ff8700;
+$white:#ffffff;
+$black: #070606;
+$nav-color: #E3F5FB;
+$alt-color: #F7F7F7;
+$background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
+
+li{
+    text-decoration: none;
+}
+a{
+   text-decoration: none;
+   display: flex;
+   padding: 10%;
+}
