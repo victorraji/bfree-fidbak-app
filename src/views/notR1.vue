@@ -1,12 +1,12 @@
 <template>
 <div class="home">
-<div class="header">
-<Header/>
+<header class="header">
+<HeaderR/>
+</header>
+<div class="header2">
+<topHeaderR/>
 </div>
-<div class="nav">
-<Navbar/>
-</div>
-<HeadD/>
+<aside class="nav2"><NavbarR/></aside>
 <!-- group 89 drop downs -->
 <div class="dropdown89">
 <div class="feedbacks">
@@ -37,7 +37,7 @@
 <li class="survey">
 <span>S/N</span>
 <span>Name</span>
-<span>Receiving Department</span>
+<span>Team</span>
 <span>Date/Time</span>
 <span>Status</span>
 </li>
@@ -47,25 +47,25 @@
 <li v-for='notlist in notlists' :key='notlist.id' class="survey">
 <span>1.</span>
 <span>Micheal</span>
-<span>Team-Lead Branch</span>
+<span>FairMoney</span>
 <span>11/03 09/33</span>
-<span><button>read</button></span>
+<span><button>pending</button></span>
 </li>
 <!-- row 3 -->
 <li v-for='notlist in notlists' :key='notlist.id' class="survey">
 <span>2.</span>
 <span>Bimpe</span>
-<span>Team-Lead Branch</span>
+<span>Branch</span>
 <span>11/03 09/33</span>
-<span><button>read</button></span>
+<span><button>Completed</button></span>
 </li>
 <!-- row 4 -->
 <li v-for='notlist in notlists' :key='notlist.id' class="survey">
 <span>2.</span>
 <span>Bimpe</span>
-<span>Team-Lead Branch</span>
+<span>Umba</span>
 <span>11/03 09/33</span>
-<span><button>read</button></span>
+<span><button>Pending</button></span>
 </li>
 </ul>
 
@@ -73,27 +73,24 @@
 </div>
 <div>
 <button class="buttons">Previous</button>
-<button class="buttons">Next</button>
+<button class="buttons1">Next</button>
 </div>
 </div>
 
 </template>
 
 <script>
-import Navbar from '@/components/navbar/Navbar.vue'
-import Header from '@/components/navbar/Header.vue'
-import HeadD from '@/components/navbar/HeadD.vue'
+import NavbarR from '@/components/responder/NavbarR.vue'
+import HeaderR from '@/components/responder/HeaderR.vue'
+import topHeaderR from '@/components/responder/topHeaderR.vue'
 
-import vue from 'vue'
-import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns'
-vue.use(DropDownListPlugin)
-export default vue.extend({
+export default {
   name: 'HomeView',
 
   components: {
-    Navbar,
-    Header,
-    HeadD
+    NavbarR,
+    HeaderR,
+    topHeaderR
   },
   data: function () {
     return {
@@ -142,18 +139,11 @@ export default vue.extend({
 
     }
   }
-})
+}
 
 </script>
 
 <style scoped>
-
-.nav {
-padding: 1px 9px 3px 1px;
-}
-.header {
-margin: 70px 20px;
-}
 .dropdown89 {
 position: absolute;
 height: 40px;
@@ -233,6 +223,32 @@ background-color: rgba(181, 215, 227, 0.31);;
 li:first-child {
 background-color:#00A4DB;;
 }
+.home {
+display: grid;
+grid-template-columns: 240px 1fr;
+grid-template-rows: 20px 140px;
+grid-template-areas:
+"nav2 header"
+"nav2 header2"
+"nav2 main";
+height: 100vh;
+background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
+}
+.survey {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #000000;
+}
+
+.nav2 {
+grid-area: nav2;
+}
+.header {
+grid-area: header;
+}
 .buttons {
 background-color: #00A4DB;
 border: 1px solid #FFFFFF;
@@ -246,13 +262,29 @@ line-height: 20px;
 color: #FFFFFF;
 margin: -10px 20px 30px 40px;
 padding: 5px 40px;
+position: absolute;
+width: 161px;
+height: 30px;
+left: 657px;
+top: 942px;
 }
-.survey {
+.buttons1 {
+background-color: #00A4DB;
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 5px;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color: #000000;
+font-size: 13px;
+line-height: 20px;
+color: #FFFFFF;
+margin: -10px 20px 30px 40px;
+padding: 5px 40px;
+position: absolute;
+width: 161px;
+height: 30px;
+left: 830px;
+top: 942px;
 }
 </style>

@@ -44,7 +44,7 @@ body{
 }
 .head-logo {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 20px;
   padding: 15px;
 }

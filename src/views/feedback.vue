@@ -29,7 +29,6 @@
 </div>
 </div>
 </div>
-<!-- top details -->
 <div class="topDetails">
 <div class="staffId">
 <div class="iD">
@@ -73,7 +72,7 @@
 <div class="receivingDepartment">
 <div class="frame962">
 <div id="dropdownlist2">
-<ejs-dropdownlist :datasource='localData' :fields='localField' placeholder="Receiving Department">
+<ejs-dropdownlist :data-source='localData2' :fields='localField2' placeholder="Receiving Department">
 
 </ejs-dropdownlist>
 </div>
@@ -86,9 +85,12 @@
 <label for="textarea1"></label>
 <textarea class="text3"></textarea>
 </div>
-<div class="input1">
-<label for="submit"></label>
-<input type="submit" value="Submit Complaint Now"></div>
+<button class="input2" @click="showModal = false">Submit Complaint Now</button>
+<transition name="fade" appear>
+<div class="modal-overlay" v-if="showModal">
+
+</div>
+</transition>
 </form>
 <!-- create poll box -->
 <div class="pollBox">
@@ -134,10 +136,28 @@
 <input type="text">
 </div>
 <!-- create poll submit button -->
-<div class="input2">
-<label for="submit"></label>
-<input type="submit" value="Create Poll"></div>
+
+<button class="input2" @click="showModal = false">Create Poll</button>
+<transition name="fade" appear>
+<div class="modal-overlay" v-if="showModal">
+
+</div>
+
+</transition>
 </form>
+<div class="popup">
+<transition name="slide" appear>
+<div class="popup-inner" v-if="showModal">
+<div class="popupP">
+<p>{{alertWord()}}</p>
+</div>
+<button class="popup-close" @click="showModal=false">
+Submit Another Response
+</button>
+<button class="popup-close2" @click="showModal=false">View Response</button>
+</div>
+</transition>
+</div>
 <!-- ending tag for poll box -->
 </div>
 <!-- ending tag for both complaint and poll boxes -->
@@ -148,10 +168,10 @@
 <!-- logo div -->
 <div class="logo">
 <div class="bfreeLogo">
-<img src="../assets/bfreeLogo.png" alt="bfreelogo">
+<img src="..\assets\bfreeLogo.png" alt="bfreelogo">
 </div>
 <div class="fidbakLogo">
-<img src="../assets/fidbak.png" alt="logo">
+<img src="..\assets\fidbak.png" alt="logo">
 </div>
 </div>
 <div class="frame59">
@@ -160,7 +180,7 @@
 <div class="homeIcon">
 <font-awesome-icon :icon="['fas', 'home']"/>
 </div>
-<router-link to="dashboard"><div class="homeP"><p>Home</p></div></router-link>
+<div class="homeP"><p>Home</p></div>
 </div>
 <!-- feedBackbar -->
 <div class="feedbackBar">
@@ -190,16 +210,21 @@
 <button class="logOutP">Log Out</button>
 </div>
 </div>
+<!-- top details -->
 </div>
+
 </div>
 </template>
 <script>
+
 import vue from 'vue'
 import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns'
 vue.use(DropDownListPlugin)
 export default vue.extend({
+
   data: function () {
     return {
+      showModal: true,
       localData: [
         { Id: 'team1', Level: 'Account Manager' },
         { Id: 'team2', Level: 'TeamLead-Branch' },
@@ -214,17 +239,44 @@ export default vue.extend({
         { Id: 'team11', Level: 'Operations-Head' },
         { Id: 'team12', Level: 'Engineering' }
       ],
-      localField: { value: 'Id', text: 'Level' }
+      localField: { value: 'Id', text: 'Level' },
+
+      localData2: [
+        { Id: 't1', Level1: 'Account Manager' },
+        { Id: 't2', Level1: 'TeamLead-Branch' },
+        { Id: 't3', Level1: 'TeamLead-Fairmoney' },
+        { Id: 't4', Level1: 'TeamLead-Kuda' },
+        { Id: 't5', Level1: 'TeamLead-Carbon' },
+        { Id: 't6', Level1: 'TeamLead-Quickcheck' },
+        { Id: 't7', Level1: 'TeamLead-Growth' },
+        { Id: 't', Level1: 'TeamLead-Float' },
+        { Id: 't9', Level1: 'Operations-HR' },
+        { Id: 't10', Level1: 'Operations-QA' },
+        { Id: 't11', Level1: 'Operations-Head' }
+      ],
+      localField2: { value: 'Id', text: 'Level1' }
+
+    }
+  },
+  methods: {
+    alertWord () {
+      const randomNumber = Math.random()
+      if (randomNumber < 0.5) {
+        return 'Complaint Submitted Successfully. Click on the Notifications icon or the Notification page on the Navigation bar to view Response'
+      } else {
+        return 'Poll Created Successfully. Go to the Report Section to view Response'
+      }
     }
   }
 })
 
 </script>
-<style >
+<style scoped>
 *{
 margin: 0px;
 Padding: 0px;
 }
+
 @import url(https://cdn.syncfusion.com/ej2/material.css);
 /*styling for the overall page*/
 .feedbackMain {
@@ -534,11 +586,11 @@ flex-grow: 0;
 margin: 0px 26px;
 }
 .rectangle29 {
-position: absolute;
+position: fixed;
 width: 1440px;
 height: 99px;
 left: 0px;
-top: 0px;
+top: 0;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -932,7 +984,7 @@ border: 2px solid rgba(0, 0, 0, 0.28);
 box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.input1 {
+.input1 button {
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -945,6 +997,7 @@ left: 116px;
 top: 655px;
 background-color: #00A4DB;
 border-radius: 5px;
+color: #FFFFFF;
 }
 .input1 input {
 font-family: 'Poppins';
@@ -1141,6 +1194,7 @@ left: 113px;
 top: 654px;
 background: #00A4DB;
 border-radius: 5px;
+color: #FFFFFF;
 }
 .input2 input {
 position: static;
@@ -1161,5 +1215,64 @@ margin: 0px 10px;
 background: #00A4DB;
 border: none;
 }
-
+.popup-inner {
+position: absolute;
+width: 797px;
+height: 259px;
+left: -380px;
+top: -40px;
+background: #FFFFFF;
+border: 0.5px solid rgba(0, 0, 0, 0.42);
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 51px 5px;
+}
+.popup-close {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+position: absolute;
+width: 268px;
+height: 50px;
+left: 88px;
+top: 173px;
+border: 1px solid #00A4DB;
+}
+.popup-close2 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+position: absolute;
+width: 294px;
+height: 50px;
+left: 376px;
+top: 173px;
+border: 1px solid #00A4DB;
+box-sizing: border-box;
+border-radius: 5px;
+}
+.popup-close:hover {
+background: #00A4DB;
+}
+.popup-close2:hover {
+background: #00A4DB;
+}
+.popupP {
+position: absolute;
+width: 441px;
+height: 78px;
+left: 154px;
+top: 49px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 26px;
+text-align: center;
+color: #00A4DB;
+}
 </style>
