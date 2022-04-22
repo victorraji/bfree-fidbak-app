@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-        <HeaderR/>
+        <Header/>
         <TheNav/>
-        <UserDetailR/>
+        <UserDetails/>
         <Togglebar/>
         <div class="main-content">
             <div class="scores">
@@ -51,18 +51,18 @@
 </template>
 
 <script>
-import HeaderR from '@/components/responder/HeaderR.vue'
+import Header from '@/components/navbar/Header.vue'
 import TheNav from '@/components/navbar/TheNav.vue'
-import UserDetailR from '@/components/responder/UserDetailR.vue'
+import UserDetails from '@/components/reusables/UserDetails.vue'
 import Togglebar from '@/components/reusables/Togglebar.vue'
 
 export default {
   name: 'reportR',
 
   components: {
-    HeaderR,
+    Header,
     TheNav,
-    UserDetailR,
+    UserDetails,
     Togglebar
   },
   data () {
@@ -79,14 +79,73 @@ export default {
 <style scoped>
 .container{
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
+}
+.user-details{
+    display: flex;
+    margin: 20px 250px 0 290px;
+    width: 93.42vw;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+}
+.bfr{
+    margin-left: -40px;
+}
+.portfolio{
+    margin-left: -40px;
+}
+.mail-path{
+    margin-left: -40px;
+}
+.reports{
+    display: flex;
+    height: 100%;
+    margin: 4% 250px;
+}
+.nps{
+    height: 74px;
+    width: 150px;
+    background: rgba(0, 164, 219, 0.27);
+    border-radius: 5px;
+    margin-left: 17px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+}
+.nps-icon{
+    padding: 10px;
+    color: #00A4DB;
+}
+.nps-text{
+    color: #00A4DB;
+}
+.poll{
+    height: 74px;
+    width: 150px;
+    background: rgba(0, 164, 219, 0.07);
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 2%;
+}
+.poll-icon{
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.28);;
+}
+.poll-text{
+    color: rgba(0, 0, 0, 0.28);
+}
+strong{
+    margin-top: 3%;
 }
 .main-content{
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 75.42vw;
-    height: 97.63vh;
+    height: 130vh;
     top: 60%;
     margin-left: 26%;
     margin-bottom: 5%;
@@ -251,9 +310,9 @@ export default {
     border: 0.3px;
     box-sizing: border-box;
     padding-left: 0;
-    margin-left: 20px;
     text-align: start;
     padding: 10px 0px;
+    margin-left: 20px;
 }
 .c-header{
     font-family: 'Poppins';
@@ -267,11 +326,12 @@ export default {
 }
 .feedback{
     padding-top: 20px;
-    height: 70%;
+    height: 95%;
     width: 69vw;
     text-align: start;
-    margin-bottom: 50%;
+    /* margin-bottom: 50%; */
     background:#FFFFFF;
+    margin-top: -25px;
 }
 p{
     padding: 5px 40px;

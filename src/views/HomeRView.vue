@@ -2,8 +2,8 @@
     <div class="body">
         <HeaderR/>
         <TheNav/>
-        <UserDetailR/>
-        <div class="wrapper">
+        <!-- <UserDetailR/> -->
+        <!-- <div class="wrapper">
             <div class="header">
                 <h4>Recent Activity</h4>
             </div>
@@ -20,22 +20,22 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script>
 import HeaderR from '@/components/responder/HeaderR.vue'
 import TheNav from '@/components/navbar/TheNav.vue'
-import UserDetailR from '@/components/responder/UserDetailR.vue'
+// import UserDetailR from '@/components/responder/UserDetailR.vue'
 
 export default {
   name: 'HomeR',
 
   components: {
     HeaderR,
-    TheNav,
-    UserDetailR
+    TheNav
+    // UserDetailR
   }
 
 }

@@ -66,7 +66,7 @@
 import Header from '@/components/navbar/Header.vue'
 import TheNav from '@/components/navbar/TheNav.vue'
 import UserDetails from '@/components/reusables/UserDetails.vue'
-import ToggleR from '@/components/reusables/ToggleR.vue'
+import ToggleR from '@/components/responder/ToggleR.vue'
 
 export default {
   name: 'ReportEngage',

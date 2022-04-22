@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import ResetPassword from '../views/ResetPassword.vue'
+import ResetPSuccess from '../views/ResetPSuccess.vue'
 import resetPasswordR from '../views/resetPasswordR.vue'
 import LandingPage from '../views/LandingPage.vue'
 import Dashboard from '../views/Dashboard.vue'
@@ -20,6 +21,9 @@ import ReportR from '../views/ReportR.vue'
 import Poll from '../views/Poll.vue'
 import PollR from '../views/PollR.vue'
 import Logout from '../views/Logout.vue'
+import SigninSuccess from '../views/SigninSuccess.vue'
+import SigninSuccessR from '../views/SigninSuccessR.vue'
+
 import LogoutR from '../views/LogoutR.vue'
 
 Vue.use(VueRouter)
@@ -56,6 +60,16 @@ const routes = [{
   component: signupwel
 },
 {
+  path: '/SigninSuccess',
+  name: 'SigninSuccess',
+  component: SigninSuccess
+},
+{
+  path: '/SigninSuccessR',
+  name: 'SigninSuccessR',
+  component: SigninSuccessR
+},
+{
   path: '/reset-password',
   name: 'ResetPassword',
   component: ResetPassword
@@ -64,6 +78,11 @@ const routes = [{
   path: '/resetPasswordR',
   name: 'resetPasswordR',
   component: resetPasswordR
+},
+{
+  path: '/ResetPSuccess',
+  name: 'ResetPSuccess',
+  component: ResetPSuccess
 },
 {
   path: '/not',

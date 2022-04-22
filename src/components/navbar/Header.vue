@@ -11,18 +11,14 @@
           <span class="notification68I" data-number="4"><font-awesome-icon :icon="['fas', 'fa-bell']"/></span>
           <font-awesome-icon :icon="['fas', 'user-circle']"/>
           <font-awesome-icon :icon="['fas', 'fa-cog']" />
-        </div>
-        <div class="userCircle">
-        </div>
-        <div class="cogIcon">
-        </div>
       </div>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: 'HeaderR',
   data () {
     return {
       welcome: 'Hello Bolade!'
@@ -40,24 +36,15 @@ header{
 .headerBlock {
 display: flex;
 justify-content: space-between;
-position: fixed;
+/* position: fixed; */
 mask-position: fixed;
-background: #F7F7F7;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-height: 15.06vh;
-align-items: center;
-margin: 0;
-width: 100%;
-}
-/* .headerBlock {
-display: flex;
-justify-content: space-between;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 height: 99px;
 align-items: center;
-margin: -70px -30px;
-} */
+margin: 0;
+width: 100%;
+}
 .headerI {
 color: #000000;
 font-family: 'Poppins';
@@ -69,11 +56,6 @@ margin-left: -4%;
 display: flex;
 /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 justify-content: space-around;
-padding: 300px;
-}
-.headerIcons {
-display: flex;
-justify-content: space-between;
 align-items: center;
 background: rgba(0, 0, 0, 0.08);
 border-radius: 5px;
@@ -81,19 +63,10 @@ height: 63px;
 width: 311px;
 margin: 30px;
 }
-/* .notification68I {
-position: relative;
-} */
-.searchIcon {
-margin-left: 30px;
-}
-.cogIcon {
-margin-right: 30px;
-}
 .notification68I {
 position: relative;
-animation: notification 2s infinite;
 margin-bottom: 10%;
+animation: notification 2s infinite;
 }
 .notification68I::after {
 content: attr(data-number);

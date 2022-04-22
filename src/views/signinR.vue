@@ -26,7 +26,7 @@
 </div>
 </label>
 <div class="inputBoxbutton">
-<button>Log In</button>
+<router-link to="HomeRView"><button>Log In</button></router-link>
 </div>
 </div>
 </form>

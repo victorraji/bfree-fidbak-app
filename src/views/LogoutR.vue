@@ -24,7 +24,6 @@ export default {
     height: 100vh;
 }
 .image{
-    /* height: 100%; */
     width: 100%;
 }
 </style>

@@ -168,10 +168,10 @@ Submit Another Response
 <!-- logo div -->
 <div class="logo">
 <div class="bfreeLogo">
-<img src="..\assets\bfreeLogo.png" alt="bfreelogo">
+<img src="../assets/bfreeLogo.png" alt="bfreelogo">
 </div>
 <div class="fidbakLogo">
-<img src="..\assets\fidbak.png" alt="logo">
+<img src="../assets/fidbak.png" alt="logo">
 </div>
 </div>
 <div class="frame59">

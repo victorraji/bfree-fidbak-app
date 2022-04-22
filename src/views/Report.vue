@@ -1,34 +1,9 @@
 <template>
   <div class="container">
-<<<<<<< HEAD
         <Header/>
         <TheNav/>
         <UserDetails/>
         <Togglebar/>
-=======
-      <HeaderR/>
-      <div class="user-details">
-          <!-- {{user}} -->
-        <div class="id">
-            <h3>Staff ID</h3>
-            <p class="bfr">BFR00055</p>
-        </div>
-        <div class="job">
-            <h3>Account Manager</h3>
-            <p class="portfolio">Branch</p>
-        </div>
-        <div class="mail">
-            <h3>Email</h3>
-            <p class="mail-path">Ifeanyi@bfree.limited</p>
-        </div>
-        </div>
-        <div class="reports">
-            <div class="nps">
-            <font-awesome-icon :icon="['fas', 'file']" class="nps-icon"/><br><span class="nps-text">NPS Report</span></div>
-            <div class="poll">
-            <font-awesome-icon :icon="['fas', 'file']" class="poll-icon"/><br><span class="poll-text">Engage Poll</span></div>
-        </div>
->>>>>>> main
         <div class="main-content">
             <div class="scores">
                 <div class="measurement">
@@ -107,8 +82,6 @@ export default {
     overflow-x: hidden;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
 }
-<<<<<<< HEAD
-=======
 .user-details{
     display: flex;
     margin: 20px 250px 0 290px;
@@ -168,12 +141,11 @@ export default {
 strong{
     margin-top: 3%;
 }
->>>>>>> main
 .main-content{
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 75.42vw;
-    height: 97.63vh;
+    height: 130vh;
     top: 60%;
     margin-left: 26%;
     margin-bottom: 5%;
@@ -338,9 +310,9 @@ strong{
     border: 0.3px;
     box-sizing: border-box;
     padding-left: 0;
-    margin-left: 20px;
     text-align: start;
     padding: 10px 0px;
+    margin-left: 20px;
 }
 .c-header{
     font-family: 'Poppins';
@@ -354,11 +326,12 @@ strong{
 }
 .feedback{
     padding-top: 20px;
-    height: 70%;
+    height: 95%;
     width: 69vw;
     text-align: start;
-    margin-bottom: 50%;
+    /* margin-bottom: 50%; */
     background:#FFFFFF;
+    margin-top: -25px;
 }
 p{
     padding: 5px 40px;

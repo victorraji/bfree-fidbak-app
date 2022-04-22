@@ -66,7 +66,7 @@
 import HeaderR from '@/components/responder/HeaderR.vue'
 import TheNav from '@/components/navbar/TheNav.vue'
 import UserDetailR from '@/components/responder/UserDetailR.vue'
-import ToggleR from '@/components/reusables/ToggleR.vue'
+import ToggleR from '@/components/responder/ToggleR.vue'
 
 export default {
   name: 'PollResponder',

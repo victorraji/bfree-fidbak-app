@@ -30,7 +30,7 @@ export default {
     margin-left: 0;
     width: 85%;
     top: 0;
-    margin-top: -500px;
+    /* margin-top: -500px; */
     justify-content: space-between;
     align-items: start;
     text-align: start;

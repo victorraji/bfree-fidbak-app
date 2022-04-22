@@ -2,8 +2,8 @@
 <nav class="nav-wrapper">
   <div class="wrapper">
     <div class="logo">
-        <img src="../../assets/bfreeLogo.png" alt="Bfree Logo" />
-        <img src="../../assets/fidbak.png" alt="Fidbak Logo">
+            <img src="../../assets/bfreeLogo.png" alt="Bfree Logo" />
+            <img src="../../assets/fidbak.png" alt="Fidbak Logo">
     </div>
       <nav class="nav">
         <ul>
@@ -53,7 +53,7 @@ export default {
     .wrapper{
         display: grid;
         grid-template-rows: 1fr 3fr;
-        position: relative;
+        position: fixed;
         border-radius: 5px;
         top: 0;
         left: 0;
@@ -66,31 +66,29 @@ export default {
         .logo{
             width: 100%;
             padding: 0;
-            text-align: start;
+            margin-top: 2rem;
+            margin-left: 2rem;
         }
         .nav{
             display: grid;
             grid-template-rows: 4fr 1fr;
-            grid-row-gap: 10%;
             text-align: start;
             height: 90vh;
             width: 100%;
-            margin-top: 106%;
+            margin-top: 22%;
             ul{
                 display: grid;
                 grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-                list-style-type: none;
-                height: 30vh;
+                // list-style-type: none;
+                height: 35vh;
                 .active{
                     display: flex;
                     justify-content: space-between;
                     background-color: $pri-color;
                     padding-top: 10%;
                     width: 320%;
-                    &:first-child {
-                    color: $white;
-                }
                     .list{
+                        color: $white;
                         padding-left: 10%;
                     }
                 }
@@ -100,12 +98,10 @@ export default {
                 list-style-type: none;
             }
             .logout{
-                width: 300%;
-                margin-top: -20px;
-                color: $alt-color;
-                margin-left: -70px;
+                display: flex;
+                justify-content: space-between;
                 .exiText{
-                    margin-left: 2%;
+                    width: 100%;
                 }
             }
             .list{
