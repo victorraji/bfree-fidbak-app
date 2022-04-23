@@ -17,8 +17,8 @@
 </ul>
 </div>
 <div>
-<button class="button1">Responder</button>
-<button class="button1">Receiver</button>
+<a href="/SignupR"><button class="button1">Responder</button></a>
+<a href="/Signup"><button class="button1">Receiver</button></a>
 </div>
 </div>
 <div class="lastP">

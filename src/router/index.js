@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import ResetPassword from '../views/ResetPassword.vue'
+import ResetPSuccess from '../views/ResetPSuccess.vue'
 import resetPasswordR from '../views/resetPasswordR.vue'
 import LandingPage from '../views/LandingPage.vue'
 import Dashboard from '../views/Dashboard.vue'
@@ -14,9 +15,16 @@ import feedback from '../views/feedback.vue'
 import not from '../views/not.vue'
 import notR from '../views/notR.vue'
 import notR1 from '../views/notR1.vue'
-import DashboardResponder from '../views/DashboardResponder.vue'
+import HomeRView from '../views/HomeRView.vue'
 import Report from '../views/Report.vue'
-import ReportEngage from '../views/ReportEngage.vue'
+import ReportR from '../views/ReportR.vue'
+import Poll from '../views/Poll.vue'
+import PollR from '../views/PollR.vue'
+import Logout from '../views/Logout.vue'
+import SigninSuccess from '../views/SigninSuccess.vue'
+import SigninSuccessR from '../views/SigninSuccessR.vue'
+
+import LogoutR from '../views/LogoutR.vue'
 
 Vue.use(VueRouter)
 
@@ -52,6 +60,16 @@ const routes = [{
   component: signupwel
 },
 {
+  path: '/SigninSuccess',
+  name: 'SigninSuccess',
+  component: SigninSuccess
+},
+{
+  path: '/SigninSuccessR',
+  name: 'SigninSuccessR',
+  component: SigninSuccessR
+},
+{
   path: '/reset-password',
   name: 'ResetPassword',
   component: ResetPassword
@@ -60,6 +78,11 @@ const routes = [{
   path: '/resetPasswordR',
   name: 'resetPasswordR',
   component: resetPasswordR
+},
+{
+  path: '/ResetPSuccess',
+  name: 'ResetPSuccess',
+  component: ResetPSuccess
 },
 {
   path: '/not',
@@ -82,19 +105,34 @@ const routes = [{
   component: feedback
 },
 {
+  path: '/Logout',
+  name: 'Logout',
+  component: Logout
+},
+{
+  path: '/LogoutR',
+  name: 'LogoutR',
+  component: LogoutR
+},
+{
   path: '/Dashboard',
   name: 'Dashboard',
   component: Dashboard
 },
 {
-  path: '/ReportEngage',
-  name: 'ReportEngage',
-  component: ReportEngage
+  path: '/Poll',
+  name: 'Poll',
+  component: Poll
 },
 {
-  path: '/DashboardResponder',
-  name: 'DashboardResponder',
-  component: DashboardResponder
+  path: '/PollR',
+  name: 'PollR',
+  component: PollR
+},
+{
+  path: '/HomeRView',
+  name: 'HomeRView',
+  component: HomeRView
 },
 {
   path: '/LandingPage',
@@ -105,6 +143,11 @@ const routes = [{
   path: '/Report',
   name: 'Report',
   component: Report
+},
+{
+  path: '/ReportR',
+  name: 'ReportR',
+  component: ReportR
 },
 {
   path: '/about',

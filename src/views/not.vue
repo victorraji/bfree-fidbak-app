@@ -84,7 +84,10 @@ import Navbar from '@/components/navbar/Navbar.vue'
 import Header from '@/components/navbar/Header.vue'
 import HeadD from '@/components/navbar/HeadD.vue'
 
-export default {
+import vue from 'vue'
+import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns'
+vue.use(DropDownListPlugin)
+export default vue.extend({
   name: 'HomeView',
 
   components: {
@@ -139,11 +142,12 @@ export default {
 
     }
   }
-}
+})
 
 </script>
 
 <style scoped>
+
 .nav {
 padding: 1px 9px 3px 1px;
 }

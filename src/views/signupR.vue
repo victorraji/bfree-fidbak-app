@@ -29,7 +29,7 @@
 <input type="password" placeholder="Confirm Password" required />
 <label for="password" class="label-name"></label>
 </div>
-<div><button class="buttonUp">Sign Up</button></div>
+<div><a href="/SigninSuccessR"><button class="buttonUp">Sign Up</button></a></div>
 </div>
 </form>
 

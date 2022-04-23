@@ -67,9 +67,13 @@ export default {
 </script>
 
 <style scoped>
-* {
-margin: 0px;
-padding: 0px;
+.navContainer {
+position: fixed;
+width: 234px;
+height: 1024px;
+background-color: #E3F5FB;
+top: 0px;
+left: 0px;
 }
 .minnavBox {
 display: flex;
@@ -102,7 +106,6 @@ order: 0;
 flex-grow: 0;
 margin: 0px 0px;
 }
-
 .homeIcon {
 position: static;
 width: 16px;
@@ -112,20 +115,17 @@ top: 24px;
 flex: none;
 order: 0;
 flex-grow: 0;
-
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 40px;
 }
-
 .homeP{
 position: static;
 width: 48px;
 height: 24px;
 left: 67px;
 top: 20px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
@@ -156,7 +156,6 @@ width: 48px;
 height: 24px;
 left: 67px;
 top: 20px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
@@ -167,7 +166,6 @@ order: 1;
 flex-grow: 0;
 margin-left: -20px;
 }
-
 .feedbackIcon{
 position: static;
 width: 16px;
@@ -177,13 +175,11 @@ top: 24px;
 flex: none;
 order: 0;
 flex-grow: 0;
-
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 40px;
 }
-
 .notificationBar{
 display: flex;
 flex-direction: row;
@@ -207,7 +203,6 @@ top: 24px;
 flex: none;
 order: 0;
 flex-grow: 0;
-
 flex: none;
 order: 0;
 flex-grow: 0;
@@ -219,7 +214,6 @@ width: 48px;
 height: 24px;
 left: 67px;
 top: 20px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
@@ -253,20 +247,17 @@ top: 24px;
 flex: none;
 order: 0;
 flex-grow: 0;
-
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 40px;
 }
-
 .reportP {
 position: static;
 width: 48px;
 height: 24px;
 left: 67px;
 top: 20px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;

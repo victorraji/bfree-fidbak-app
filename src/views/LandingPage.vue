@@ -2,13 +2,14 @@
   <div class="container">
     <div class="text-wrapper">
       <div class="logo-holder">
-        <img src="../assets/logo.png" alt="fidbak logo">
+        <img src="../assets/bfreeLogo.png" alt="fidbak logo">
+        <img src="../assets/fidbak.png" alt="fidbak logo">
       </div>
       <div class="pages-body">
         <div class="body-text">
           <p class="header-text">Bridging<br> <span>communication gap</span><br> in the organisation.</p><br><br><br>
           <p class="description-text">A creative platform to encourage effective <span>communication</span> between Account Managers, Engineers and operations team within the organisation.</p>
-          <router-link to="/signin" style="text-decoration: none; color: inherit"><button><strong>Get started</strong></button></router-link>
+          <router-link to="/signupwel" style="text-decoration: none; color: inherit"><button><strong>Get started</strong></button></router-link>
         </div>
       </div>
     </div>
@@ -58,7 +59,7 @@
 
 /* Bridging communication gap in the company */
 .header-text{
-  font-family: poppins;
+  font-family: "poppins";
   font-style: normal;
   font-weight: 800;
   font-size: 45px;
@@ -73,8 +74,7 @@ span{
   /* position: static; */
   width: 430px;
   height: 72px;
-  /* left: 0px;
-  top: 215px; */
+  top: 0;
   font-display: open sans;
   font-style: normal;
   font-weight: 600px;
