@@ -3,9 +3,9 @@
 <header class="header">
 <HeaderR/>
 </header>
-<div class="header2">
-<topHeaderR/>
-</div>
+<!-- <div class="header2"> -->
+<div class="userDetails"><UserDetailR/></div>
+<!-- </div> -->
 
 <main class="main">
 <div class="fmessage"><p>Feedback Message</p></div>
@@ -19,7 +19,9 @@
 <button class="input2">Submit Response</button>
 </form>
 </main>
-<aside class="nav2"><NavbarR/></aside>
+<aside class="nav2">
+  <TheNavR/>
+</aside>
 <div class="popup">
 <transition name="slide" appear>
 <div class="popup-inner" v-if="showModal">
@@ -36,15 +38,15 @@
 
 <script>
 import HeaderR from '@/components/responder/HeaderR.vue'
-import NavbarR from '@/components/responder/NavbarR.vue'
-import topHeaderR from '@/components/responder/topHeaderR.vue'
+import TheNavR from '@/components/responder/TheNavR.vue'
+import UserDetailR from '@/components/responder/UserDetailR.vue'
 export default {
   name: 'notR',
 
   components: {
     HeaderR,
-    NavbarR,
-    topHeaderR
+    TheNavR,
+    UserDetailR
   },
   data () {
     return {
@@ -82,25 +84,25 @@ background: #F7F7F7;
 border: 0.5px solid rgba(0, 0, 0, 0.49);
 box-sizing: border-box;
 display: flex;
+width: 83.1%;
 flex-direction: column;
 align-items: center;
-margin-top: 70px;
+margin: 70px 0 0 120px;
 }
 .nav2 {
 grid-area: nav2;
-margin-top: -35px;
+margin: 0 0 0 45px;
 }
 
 .header {
-grid-area: header;
-margin: 60px 20px;
+  margin: 0 0 0 -250px;
 }
 .header2 {
-margin-top: 50px;
+  margin: 7% 0 0 0;
 }
 .fmessage {
 background: #00A4DB;
-width: 1125px;
+width: 907px;
 }
 .fmessage p {
 font-family: 'Poppins';
@@ -115,7 +117,7 @@ background: #FFFFFF;
 border: 0.3px solid #000000;
 box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-width: 1014px;
+width: 907px;
 height: 209px;
 margin: 30px;
 }
@@ -130,7 +132,7 @@ color: #000000;
 }
 
 .textArea {
-width: 1014px;
+width: 907px;
 height: 143px;
 background: #FFFFFF;
 border: 0.3px solid #000000;
@@ -162,7 +164,7 @@ color: #000000;
 position: absolute;
 width: 616px;
 height: 281px;
-left: 457px;
+left: 500px;
 top: 410px;
 background: #FFFFFF;
 border: 0.2px solid #00A4DB;
@@ -195,5 +197,8 @@ font-weight: 500;
 font-size: 20px;
 line-height: 30px;
 text-align: center;
+}
+.userDetails{
+  margin: 80px 0 0 -260px;
 }
 </style>

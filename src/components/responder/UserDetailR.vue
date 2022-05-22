@@ -1,47 +1,47 @@
 <template>
-  <div class="user-details">
-        <div></div>
-        <div></div>
-        <div class="id">
-            <!-- <p>{{department}}</p> -->
-            <h3>Department</h3>
-            <p class="bfr">Enginering</p>
+    <div class="topDetails">
+        <div class="staffId">
+            <div class="iD">
+                <h3>Department</h3>
+            </div>
+            <div class="siD">
+                <p>{{department}}</p>
+            </div>
         </div>
-        <div class="job">
-            <h3>Team</h3>
-            <p class="portfolio">Product Manager</p>
-        </div>
-        <div class="mail">
-            <h3>Email</h3>
-            <p class="mail-path">Ifeanyi@bfree.limited</p>
-        </div>
- </div>
+
+    <div class="accountM">
+        <div class="acc"><h3>Team</h3></div>
+        <div class="teamN"><p>{{team}}</p></div>
+    </div>
+    <div class="amEmail">
+        <div class="eTag"><h3>Email</h3></div>
+        <div class="emailAddress"><p>{{email}}</p></div>
+    </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'UserDetailR'
+  name: 'UserDetailR',
+  data () {
+    return {
+      department: 'Engineering',
+      team: 'Product Manager',
+      email: 'ifeanyi@bfree.africa'
+    }
+  }
 }
 </script>
 
 <style scoped>
-.user-details{
-    display: flex;
-    margin-left: 0;
-    width: 85%;
-    top: 0;
-    margin-top: -500px;
-    justify-content: space-between;
-    align-items: start;
-    text-align: start;
-}
-.bfr{
-    text-align: start;
-}
-.portfolio{
-    text-align: start;
-}
-.mail-path{
-    text-align: start;
+.topDetails {
+display: flex;
+justify-content: space-between;
+height: 99px;
+width: 70%;
+text-align: start;
+margin-left: 28%;
+background-color: #fff;
+padding: 15px;
 }
 </style>

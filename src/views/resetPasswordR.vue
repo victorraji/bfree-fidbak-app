@@ -19,7 +19,7 @@
           </label>
          </div>
         </form>
-         <button @click="reset()" class="input">Reset Password</button>
+         <button @click="reset()" class="input"><router-link to="/New"> Reset Password</router-link></button>
       </div>
 </div>
 </div>
@@ -93,6 +93,11 @@ export default {
         font-weight: bold;
     }
 
+    .input a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
     .inputBox input {
         position: relative;
         height: 60px;
@@ -115,5 +120,8 @@ export default {
         left: 90px;
         bottom: 220px;
         color: rgba(0, 0, 0, 0.43);
+    }
+    button{
+        border: 4px solid #00A4DB;
     }
 </style>

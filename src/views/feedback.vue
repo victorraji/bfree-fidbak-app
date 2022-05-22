@@ -3,9 +3,9 @@
 <div class="mainGrid">
 <!-- rectangle 59 hello bplade rectangle -->
 <div class="rectangle29">
-<div class="topIcons">
-<div class="boladeT"><p>Hello Bolade!</p></div>
-<!-- top detail icons -->
+<!-- <div class="topIcons"> -->
+<Header/>
+<!-- <div class="boladeT"><p>Hello Bolade!</p></div>
 <div class="frame53">
 <div class="searchIcon">
 <font-awesome-icon :icon="['fas', 'search']"/>
@@ -26,11 +26,12 @@
 <div class="cogIcon">
 <font-awesome-icon :icon="['fas', 'fa-cog']"/>
 </div>
-</div>
-</div>
+</div> -->
+<!-- </div> -->
 </div>
 <div class="topDetails">
-<div class="staffId">
+<UserDetails/>
+<!-- <div class="staffId">
 <div class="iD">
 <p>Staff ID</p>
 </div>
@@ -50,7 +51,7 @@
 <div class="amEmail">
 <div class="eTag"><p>Email</p></div>
 </div>
-<div class="emailAddress"><p>bolade@bfree.limited</p></div>
+<div class="emailAddress"><p>bolade@bfree.limited</p></div> -->
 </div>
 <!-- main body -->
 <div class="mainBorder">
@@ -154,7 +155,7 @@
 <button class="popup-close" @click="showModal=false">
 Submit Another Response
 </button>
-<button class="popup-close2" @click="showModal=false">View Response</button>
+<router-link to="/not"><button class="popup-close2" @click="showModal=false">View Response</button></router-link>
 </div>
 </transition>
 </div>
@@ -163,60 +164,20 @@ Submit Another Response
 <!-- ending tag for both complaint and poll boxes -->
 </div>
 
-<!-- nav container -->
-<div class="navContainer">
-<!-- logo div -->
-<div class="logo">
-<div class="bfreeLogo">
-<img src="../assets/bfreeLogo.png" alt="bfreelogo">
-</div>
-<div class="fidbakLogo">
-<img src="../assets/fidbak.png" alt="logo">
-</div>
-</div>
 <div class="frame59">
-<!-- homebar -->
-<div class="homeBar">
-<div class="homeIcon">
-<font-awesome-icon :icon="['fas', 'home']"/>
+  <TheNav/>
 </div>
-<div class="homeP"><p>Home</p></div>
-</div>
-<!-- feedBackbar -->
-<div class="feedbackBar">
-<div class="feedbackIcon">
-<font-awesome-icon :icon="['fas', 'user']"/>
-</div>
-<div class="feedbackP"><p>Feedback</p></div>
-</div>
-<!-- notification bar -->
-<div class="notificationBar">
-<div class="notificationIcon">
-<font-awesome-icon :icon="['fas', 'bell']"/>
-</div>
-<div class="notificationP"><p>Notification</p></div>
-</div>
-<div class="reportBar">
-<div class="reportIcon">
-<font-awesome-icon :icon="['fas', 'area-chart']"/>
-</div>
-<div class="reportP"><p>Report</p></div>
-</div>
-</div>
-<div class="logOut">
-<div class="logOutI">
-<font-awesome-icon :icon="['fas', 'sign-out']"/>
-</div>
-<button class="logOutP">Log Out</button>
-</div>
+<!-- </div> -->
 </div>
 <!-- top details -->
 </div>
 
-</div>
+<!-- </div> -->
 </template>
 <script>
-
+import TheNav from '@/components/navbar/TheNav.vue'
+import Header from '@/components/navbar/Header.vue'
+import UserDetails from '@/components/reusables/UserDetails.vue'
 import vue from 'vue'
 import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns'
 vue.use(DropDownListPlugin)
@@ -257,6 +218,11 @@ export default vue.extend({
       localField2: { value: 'Id', text: 'Level1' }
 
     }
+  },
+  components: {
+    TheNav,
+    Header,
+    UserDetails
   },
   methods: {
     alertWord () {
@@ -697,16 +663,16 @@ opacity: .4;
 /*top detail CSS*/
 .topDetails {
 position: absolute;
-width: 1123px;
+width: 100%;
 height: 68px;
-left: 274px;
+left: 0;
 top: 131px;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 0px;
 }
-.staffId {
+/* .staffId {
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -720,9 +686,9 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 296px;
-}
+} */
 /*left: 0px is not moving this to the left, had to change*/
-.iD {
+/* .iD {
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
@@ -749,9 +715,9 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 2px 0px;
-}
+} */
 /*removed top measurement*/
-.siD {
+/* .siD {
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
@@ -859,7 +825,7 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 0px 0px;
-}
+} */
 /*CSS for main border*/
 .mainBorder {
 position: absolute;

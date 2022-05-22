@@ -18,19 +18,19 @@
                 <label for="password"><font-awesome-icon :icon="['fas', 'lock']" class="lock-icon"/> Enter your password <font-awesome-icon :icon="['fas', 'eye']" class="eye-icon"/></label>
             </div>
             <div class="mistake">
-                <p><font-awesome-icon :icon="['fas', 'warning']" class="warn-icon"/> Wrong email or password. Try again or click <a href="">Reset password</a> <br><span>to reset it.</span></p>
+                <p><font-awesome-icon :icon="['fas', 'warning']" class="warn-icon"/> Wrong email or password. Try again or click Reset password to reset it.</p>
             </div>
-            <button class="btn">Log in</button>
+            <router-link to="/HomeRView"><button class="btn"><span>Log in</span></button></router-link>
             <div class="resetArea">
                 <p>Forgot Password? <a href="">reset password</a></p>
                 <span>
                     <strong>Don't have an account? </strong>
-                    <a href="">Sign up</a>
+                    <router-link to="/signupR">Sign up</router-link>
                 </span>
             </div>
           </div>
           <div class="imageBox">
-              <img src="../assets/landingimage.svg" alt="">
+              <img src="../assets/istockphoto-1132284560-612x612 1.jpg" alt="A man working with a Laptop">
           </div>
       </div>
   </div>
@@ -38,7 +38,9 @@
 
 <script>
 export default {
-
+  name: 'WrongDetailR',
+  components: {
+  }
 }
 </script>
 
@@ -87,7 +89,7 @@ export default {
                         outline: 0;
                         border-width: 2px;
                         &:focus + label{
-                            margin-top: -25px;
+                            margin-top: -35px;
                             color: #CD2D2D;
                         }
                     }
@@ -104,9 +106,6 @@ export default {
             }
             .mistake{
             color: #CD2D2D;
-            & p span{
-                padding-left: 1.5rem;
-            }
             }
             .resetArea{
                 padding-left: 2rem;
@@ -114,8 +113,11 @@ export default {
         }
     }
     .imageBox{
+        margin-right: -10px;
         & img{
+            width: 58vw;
             height: 78vh;
+            margin-left: 40px;
         }
     }
     a{

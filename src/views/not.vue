@@ -1,10 +1,10 @@
 <template>
 <div class="home">
-<div class="header">
+<!-- <div class="header"> -->
 <Header/>
-</div>
+<!-- </div> -->
 <div class="nav">
-<Navbar/>
+<TheNav/>
 </div>
 <HeadD/>
 <!-- group 89 drop downs -->
@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/navbar/Navbar.vue'
+import TheNav from '@/components/navbar/TheNav.vue'
 import Header from '@/components/navbar/Header.vue'
 import HeadD from '@/components/navbar/HeadD.vue'
 
@@ -91,7 +91,7 @@ export default vue.extend({
   name: 'HomeView',
 
   components: {
-    Navbar,
+    TheNav,
     Header,
     HeadD
   },
@@ -151,9 +151,9 @@ export default vue.extend({
 .nav {
 padding: 1px 9px 3px 1px;
 }
-.header {
+/* .header {
 margin: 70px 20px;
-}
+} */
 .dropdown89 {
 position: absolute;
 height: 40px;

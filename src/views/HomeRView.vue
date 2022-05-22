@@ -1,93 +1,52 @@
 <template>
-    <div class="body">
-        <HeaderR/>
-        <TheNav/>
-        <!-- <UserDetailR/> -->
-        <!-- <div class="wrapper">
-            <div class="header">
-                <h4>Recent Activity</h4>
-            </div>
-            <div class="active">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam </p>
-            </div>
-        </div> -->
-    </div>
+<div class="main1">
+<!-- <header class="header1"> -->
+<HeaderR/>
+<TheNavR/>
+<!-- </header> -->
+<div class="header2">
+<UserDetailR/>
+</div>
+<FeedbackR/>
+</div>
 </template>
 
 <script>
 import HeaderR from '@/components/responder/HeaderR.vue'
-import TheNav from '@/components/navbar/TheNav.vue'
-// import UserDetailR from '@/components/responder/UserDetailR.vue'
-
+import TheNavR from '@/components/responder/TheNavR.vue'
+import UserDetailR from '@/components/responder/UserDetailR.vue'
+import FeedbackR from '@/components/responder/FeedbackR.vue'
 export default {
-  name: 'HomeR',
+  name: 'notR',
 
   components: {
     HeaderR,
-    TheNav
-    // UserDetailR
+    TheNavR,
+    UserDetailR,
+    FeedbackR
+  },
+  data () {
+    return {
+      showModal: true,
+      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta ipsa fugit molestias iure impedit, numquam et quae quisquam praesentium',
+      alertWords: 'Your Account has been Created Succesfully'
+    }
   }
-
+  // methods: {
+  //   alertWord () {
+  //     const randomNumber = Math.random()
+  //     if (randomNumber < 0.5) {
+  //       return 'Your response has been sent successfully'
+  //     }
+  //   }
+  // }
 }
 </script>
 
-<style scoped>
-.body{
-    background: #f7f7f7;
-}
-.wrapper{
-    height:730px;
-    width: 70%;
-    padding: 10px 0;
-    margin-left: 26%;
-    margin-top: 5%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-@media screen and (min-width: 700px) {
-    .wrapper{
-    /* height:2000px; */
-    width: 70%;
-    padding: 10px 0;
-    margin-left: 26%;
-    margin-top: 5%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.header{
-    width: 100%;
-    height: 6.5vh;
-    background: #00A4DB;
-    color: #fff;
-    text-align: start;
-    text-indent: 4%;
-    line-height: 6.5vh;
-    margin-bottom: 2rem;
-}
-.active{
-    text-align: start;
-    font-style: normal;
-    font-weight: 500;
-    margin-left: 4%;
-    line-height: 30px;
-}
-}
-@media screen and (min-width: 1000px) {
-    .wrapper{
-    /* height:2000px; */
-    width: 70%;
-    padding: 10px 0;
-    margin-left: 26%;
-    margin-top: 5%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
+<style lang="scss" scoped>
+@import "/scss/style.scss";
+.header2{
+  width: 100%;
+  padding: 7% 0 0 0;
 }
 </style>

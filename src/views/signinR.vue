@@ -12,7 +12,7 @@
 <form @submit.prevent="submitForm">
 <div class="inputBox">
 <label id="icon" for="email" >
-<input required type="email" placeholder="Email Address" v-model="eMail">
+<input type="email" placeholder="Email Address" v-model="eMail" required>
 <div class="icon">
 <font-awesome-icon :icon="['fas', 'envelope']"/>
 </div>
@@ -20,13 +20,13 @@
 </div>
 <div class="inputBox">
 <label for="password">
-<input required type="password" placeholder="Password">
+<input type="password" placeholder="Password" required>
 <div class="icon">
 <font-awesome-icon :icon="['fas', 'lock']"/>
 </div>
 </label>
 <div class="inputBoxbutton">
-<router-link to="HomeRView"><button>Log In</button></router-link>
+<router-link to="WrongDetailR"><button v-if="login"><span>Log In</span></button></router-link>
 </div>
 </div>
 </form>
@@ -36,15 +36,16 @@
 <div class="lowerClass1">
 <div class="forgotPassword">
 <p class="word">Forgot password?</p>
-
-</div>
 <div class="reset">
-<a href="#" class="resetLink">Reset password</a>
+<router-link style="text-decoration: none;" to="/resetPasswordR" class="resetLink">Reset password</router-link>
+</div>
 </div>
 </div>
 <div class="lowerClass2">
-<p class="signUp">Don't have an account?</p>
-<a href="/" class="signUpLink">Sign Up</a>
+<p class="signUp">
+  <strong>Don't have an account?</strong>
+  <router-link to="/signupR" class="signUpLink">Sign Up</router-link>
+</p>
 </div>
 </div>
 </div>
@@ -60,6 +61,11 @@ export default {
   name: 'signinR',
   components: {
     reuseables
+  },
+  data () {
+    return {
+      login: true
+    }
   }
 
 }
@@ -136,8 +142,31 @@ top: calc(50%-65px/2+129.5px);
 background: #00A4DB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
+border: 4px solid #00A4DB;
 color:  #FFFFFF;
 font-weight: bold;
+}
+button span{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button span:after{
+  content: '\2192';
+  transition: 0.5s;
+  opacity: 0;
+  margin-left: 20px;
+}
+button span:hover span{
+  padding-right: 25px;
+}
+button span:hover:after{
+  opacity: 1;
 }
 .lowerClass1 {
 display: flex;
@@ -148,14 +177,21 @@ margin: 100px 10px 40px 120px;
 }
 .lowerClass2 {
 display: flex;
-flex-direction: row;
-margin: 20px 5px -80px 120px;
-padding: -40px;
+justify-content: center;
+margin: -70px 0 0 65px;
+}
+.forgotPassword{
+  display: flex;
 }
 .resetLink {
-margin: 15px 20px -10px 10px;
+  color:#00A4DB;
+  margin: 50px 20px -10px 10px;
+}
+.reset{
+  margin: 17px 0 0 0;
 }
 .signUpLink {
-margin: 15px ;
+  color:#00A4DB;
+  margin: 15px;
 }
 </style>

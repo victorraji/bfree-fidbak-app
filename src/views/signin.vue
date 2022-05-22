@@ -1,9 +1,9 @@
 <template>
 <div class="body">
 <div class="rectangle29">
-<div class="logoImage">
+<!-- <div class="logoImage"> -->
 <img src="../assets/logo.jpg" alt="logo" class="image1">
-</div>
+<!-- </div> -->
 </div>
 <div class="mainblock">
 <div class="pageimage">
@@ -36,10 +36,10 @@
 </form>
 <div class="lowerClass">
 <div class="forgotPassword">
-<p class="word"><router-link to="/ResetPassword">Forgot password?</router-link></p>
+<p class="word">Forgot password?</p>
 </div>
 <div class="reset">
-<router-link to="ResetPassword"><a href="#" class="resetLink">Reset password</a></router-link>
+<a href="/Reset-Password" class="resetLink">Reset password</a>
 </div>
 </div>
 <p class="signUp">Don't have an account?</p>
@@ -71,27 +71,27 @@ margin: 0;
 padding: 0;
 }
 .body {
-width: 1440px;
-height:1024px;
+width: 100%;
+height:100vh;
 background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
-position: relative;
+/* position: relative; */
 }
 .rectangle29 {
 position: absolute;
 width: 1440px;
-height: 158px;
+height: 150px;
 left: 0px;
 top: 0px;
 background: #FFFFFF;
 }
 /* for logo image */
-.logoImage {
+/* .logoImage {
 position: absolute;
 width: 1440px;
 background: #FFFFFF;
 height: 75.4px;
 padding: 75.4px;
-}
+} */
 .image1 {
 position: absolute;
 width: 163px;
@@ -110,7 +110,7 @@ top: 217px;
 .pnform {
 position: absolute;
 width: 431px;
-height: 442px;
+height: 430px;
 top: 282px;
 left: 100px;
 font-style: normal;

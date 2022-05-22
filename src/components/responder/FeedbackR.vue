@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="header">
-            <h4>Notification</h4>
+            <h4>Feedbacks</h4>
         </div>
         <div class="feedbacks">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iusto qui earum possimus. Recusandae, unde. Quis quas doloribus totam ex ea alias, accusantium nihil?</p>
@@ -28,21 +28,22 @@ export default {
 <style lang="scss" scoped>
 @import "/scss/style.scss";
 .wrapper{
-    // height: 50vh;
-    height: 350px;
+    height: 100vh;
     width: 70%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 30px 0 0 25%;
+    margin: 3% 0 0 25%;
     @media screen and (max-width: 1500px) {
         // height: 80vh;
-        height: 350px;
+        height: 120vh;
     }
     @media screen and (max-width: 900px) {
         height: 120vh;
     }
     @media screen and (max-width: 450px) {
-        height: 150vh
+        overflow: hidden;
+        height: 100vh;
+        width: 5vw;
     }
     .header{
         @include font(5, 300, 7vh, $white);

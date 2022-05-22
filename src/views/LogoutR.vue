@@ -1,18 +1,18 @@
 <template>
   <div class="container">
-    <TextRap/>
+    <TextRapR/>
     <img src="../assets/man.png" alt="A man seating by a Laptop" class="image">
   </div>
 </template>
 
 <script>
-import TextRap from '@/components/reusables/TextRap.vue'
+import TextRapR from '@/components/responder/TextRapR.vue'
 
 export default {
   name: 'LogoutR',
 
   components: {
-    TextRap
+    TextRapR
   }
 }
 </script>

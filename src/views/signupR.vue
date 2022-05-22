@@ -18,7 +18,7 @@
 <label for="email address" class="label-name"></label>
 </div>
 <div>
-<input type="text"  autocomplete="off"  placeholder="Department e.g operations(QA)" required />
+<input type="text"  autocomplete="off"  placeholder="Department e.g operations(QA)" class="" required />
 <label for="name" class="label-name"></label>
 </div>
 <div>
@@ -29,16 +29,16 @@
 <input type="password" placeholder="Confirm Password" required />
 <label for="password" class="label-name"></label>
 </div>
-<div><a href="/SigninSuccessR"><button class="buttonUp">Sign Up</button></a></div>
+<div><router-link to="/SigninSuccessR"><button class="buttonUp"><span>Sign Up</span></button></router-link></div>
 </div>
 </form>
 
 <div class="lastP">
-<p>Do you have an account already? <a href="/">Log in</a></p>
+<p>Do you have an account already? <router-link to="/signin">Log in</router-link></p>
 </div>
 </div>
 </div>
-<reuseables/>
+<div class="image"><reuseables/></div>
 </div>
 </template>
 
@@ -59,7 +59,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 .logoImage {
-margin: -40px 80px 10px -180px;
+margin: -10px 80px 10px -180px;
 padding: 15px;
 }
 .formMain {
@@ -96,12 +96,35 @@ transform: translateY(-150px);
 .buttonUp {
 background: #00A4DB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border: 4px solid #00A4DB;
 border-radius: 5px;
 color: white;
 height: 100%;
 width: 80%;
 margin: 25px;
 padding: 20px;
+}
+.buttonUp span{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.buttonUp span:after{
+  content: '\2192';
+  transition: 0.5s;
+  opacity: 0;
+  margin-left: 20px;
+}
+.buttonUp span:hover span{
+  padding-right: 25px;
+}
+.buttonUp span:hover:after{
+  opacity: 1;
 }
 .forM1 {
 margin-right: 250px;
@@ -128,5 +151,8 @@ font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 color: #00A4DB;
+}
+.image{
+height: 100vh;
 }
 </style>

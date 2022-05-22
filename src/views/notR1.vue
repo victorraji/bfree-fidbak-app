@@ -1,12 +1,12 @@
 <template>
 <div class="home">
-<header class="header">
+<header class="headerBlock">
 <HeaderR/>
 </header>
 <div class="header2">
-<topHeaderR/>
+  <div class="userDetail"><UserDetailR/></div>
 </div>
-<aside class="nav2"><NavbarR/></aside>
+<aside class="nav2"><TheNavR/></aside>
 <!-- group 89 drop downs -->
 <div class="dropdown89">
 <div class="feedbacks">
@@ -80,17 +80,17 @@
 </template>
 
 <script>
-import NavbarR from '@/components/responder/NavbarR.vue'
+import TheNavR from '@/components/responder/TheNavR.vue'
 import HeaderR from '@/components/responder/HeaderR.vue'
-import topHeaderR from '@/components/responder/topHeaderR.vue'
+import UserDetailR from '@/components/responder/UserDetailR.vue'
 
 export default {
   name: 'HomeView',
 
   components: {
-    NavbarR,
+    TheNavR,
     HeaderR,
-    topHeaderR
+    UserDetailR
   },
   data: function () {
     return {
@@ -248,6 +248,7 @@ grid-area: nav2;
 }
 .header {
 grid-area: header;
+padding-left: -40px;
 }
 .buttons {
 background-color: #00A4DB;
@@ -268,6 +269,9 @@ height: 30px;
 left: 657px;
 top: 942px;
 }
+.headerBlock{
+margin-left: -250px;
+}
 .buttons1 {
 background-color: #00A4DB;
 border: 1px solid #FFFFFF;
@@ -286,5 +290,8 @@ width: 161px;
 height: 30px;
 left: 830px;
 top: 942px;
+}
+.userDetail{
+  margin: 80px 0 0 -280px;
 }
 </style>

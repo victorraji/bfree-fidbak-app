@@ -6,12 +6,14 @@
           </div>
           <div class="confirmation">
               <div class="textArea">
-                <div class="circle"><font-awesome-icon :icon="['fas', 'check']" class="icon"/></div>
+                <!-- <div class="circle"><font-awesome-icon :icon="['fas', 'check']" class="icon"/></div> -->
+                <div class="circle"><img src="../assets/passmark.png"></div>
                 <div class="textStyle">Account Created<br>Successfully</div>
-                <router-link to="signinR"><button class="btn"><strong>Log in</strong></button></router-link>
+                <router-link to="signin"><button class="btn"><span>Log in</span></button></router-link>
               </div>
-            <div class="image"></div>
-          <img src="../assets/landingimage.svg" alt="" class="image"/>
+            <div class="image-box">
+                <img src="../assets/landingimage.svg" alt="A woman sitting by a laptop" class="image" />
+            </div>
           </div>
   </div>
 </template>
@@ -27,6 +29,7 @@ export default {
 .wrapper{
     display: grid;
     grid-template-rows: 1fr 9fr;
+    overflow: hidden;
     .logo{
         text-align: start;
         margin-left: 100px;
@@ -35,18 +38,18 @@ export default {
     .confirmation{
         display: flex;
         text-align: start;
+        height: 90vh;
         background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
         .textArea{
             display: grid;
             grid-template-rows: 1fr 0.5fr 0.5fr;
             width: 50%;
             .circle{
-                height: 15vh;
-                width: 8vw;
-                background: $pri-color;
-                border-radius: 50%;
-                text-align: center;
-                margin: 20% 0 0 280px;
+                margin: 20% 0 0 250px;
+                @media screen and (max-width: 1000px){
+                    margin-right: 8%;
+                    line-height: 12vh;
+                }
                 .icon{
                     height: 5vh;
                     width: 5vw;
@@ -55,12 +58,42 @@ export default {
                 }
             }
             .btn{
-                margin-left: 80px;
+                margin-left: 150px;
             }
             .textStyle{
                 @include font( 30px, 700, 2, $black);
                 text-align: center;
             }
+        }
+        .image-box{
+            width: 90vh;
+            .image{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 700px){
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            height: 180vh;
+            justify-content: center;
+            .textArea{
+                .circle{
+                    width: 12vw;
+                    height: 12vh;
+                    margin: 5rem 12rem 2rem 12rem;
+                    .icon{
+                        width: 6vw;
+                    }
+                }
+                .btn{
+                    width: 350px;
+                    height: 50px;
+                    margin: 3rem 3rem 4rem 4rem;
+                }
+            }
+        }
+        .image-box{
+            justify-content: center;
         }
     }
 }

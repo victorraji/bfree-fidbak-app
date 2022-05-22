@@ -6,18 +6,10 @@
         <h1>{{welcome}}</h1>
       </div>
       <div class="headerIcons">
-        <!-- <div class="searchIcon"> -->
           <font-awesome-icon :icon="['fas', 'search']"/>
-          <span class="notification68I" data-number="4"><font-awesome-icon :icon="['fas', 'fa-bell']"/></span>
+          <router-link style="text-decoration: none; color: #00000040;" to="/notR1"><span class="notification68I" data-number="4"><font-awesome-icon :icon="['fas', 'fa-bell']"/></span></router-link>
           <font-awesome-icon :icon="['fas', 'user-circle']"/>
           <font-awesome-icon :icon="['fas', 'fa-cog']" />
-        <!-- </div> -->
-        <!-- <div class="notification68I" data-number="4">
-        </div>
-        <div class="userCircle">
-        </div>
-        <div class="cogIcon">
-        </div> -->
       </div>
     </div>
   </header>
@@ -44,6 +36,7 @@ header{
 display: flex;
 justify-content: space-between;
 position: fixed;
+top: 0;
 mask-position: fixed;
 background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -53,11 +46,13 @@ margin: 0;
 width: 100%;
 }
 .headerI {
+width: 20vw;
 color: #000000;
+/* color: red; */
 font-family: 'Poppins';
 font-style: normal;
-padding: 40px;
-margin-left: -4%;
+padding: 40px 40px 40px 10px;
+/* margin: 0 0 0 3px; */
 }
 .headerIcons {
 display: flex;
@@ -72,7 +67,7 @@ margin: 30px;
 }
 .notification68I {
 position: relative;
-margin-bottom: 10%;
+/* margin-bottom: 10%; */
 animation: notification 2s infinite;
 }
 .notification68I::after {
@@ -90,5 +85,19 @@ transform: translateX(-3px);
 10% {transform: rotate(-10deg);}
 15% {transform: rotate(10deg);}
 20% {transform: rotate(0deg);}
+}
+@media screen and (max-width: 900px) {
+.headerI {
+  width: 15vw;
+  font-size: 15px;
+  padding: 60px 40px 60px 100px;
+  }
+}
+@media screen and (max-width: 600px){
+.headerI {
+  width: 10vw;
+  font-size: 8px;
+  padding: 60px 40px 40px 100px;
+  }
 }
 </style>

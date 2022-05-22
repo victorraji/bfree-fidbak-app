@@ -8,32 +8,26 @@
       <nav class="nav">
         <ul>
             <div class="listStyle">
-                <router-link style="text-decoration: none;" to="/Dashboard">
+                <router-link style="text-decoration: none;" to="/HomeRView">
                     <div class="home-icon"><font-awesome-icon :icon="['fas', 'house']" /></div>
                     <div class="list"><li><span class="homeText">Home</span></li></div>
                 </router-link>
             </div>
             <div class="listStyle">
-                <router-link style="text-decoration: none;" to="/feedback">
-                    <font-awesome-icon :icon="['fas', 'comments']" class="feedback-icon"/>
-                    <li class="list"><span class="fedText">Feedback</span></li>
-                </router-link>
-            </div>
-            <div class="listStyle">
-                <router-link style="text-decoration: none;" to="/not">
+                <router-link style="text-decoration: none;" to="/notR">
                     <font-awesome-icon :icon="['fas', 'bell']" class="notification-icon" />
                     <li class="list"><span class="noText"> Notification</span></li>
                 </router-link>
             </div>
             <div class="listStyle">
-                <router-link style="text-decoration: none;" to="/Report">
+                <router-link style="text-decoration: none;" to="/ReportR">
                     <font-awesome-icon :icon="['fas', 'area-chart']" class="report-icon"/>
                     <li class="list"> <span class="reporText">Report</span></li>
                 </router-link>
             </div>
         </ul>
         <div class="logOut">
-            <router-link style="text-decoration: none;" to="/Logout">
+            <router-link style="text-decoration: none;" to="/LogoutR">
                 <font-awesome-icon :icon="['fas', 'sign-out']" class="logout-icon"/>
                 <li class="list"> <span class="exiText">LogOut</span></li>
             </router-link>
@@ -46,22 +40,6 @@
 <script>
 export default {
   name: 'NavBarR'
-//   data () {
-//     return {
-//       color: red;
-//       }
-//   }
-//   data: function () {
-//     return {
-//       items: [
-//         { message: 'Home' },
-//         { message: 'Feedback' },
-//         { message: 'Notification' },
-//         { message: 'Report' },
-//         { message: 'Logout' }
-//       ]
-//     }
-//   }
 }
 </script>
 
@@ -153,9 +131,6 @@ export default {
                 .homeText{
                     padding: 0 0 0 25px;
                 }
-                .fedText{
-                    padding: 0 0 0 22px;
-                }
                 .noText{
                     padding: 0 0 0 28px;
                 }
@@ -183,23 +158,22 @@ export default {
             }
         }
     }
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 300px){
         .wrapper{
             .logo{
-                // display: flex;
+                display: flex;
                 .bfreeLogo{
                     width: 10px;
                 }
                 .fidbakLogo{
-                    width: 30px;
-                    padding: 0 0 2px 3px;
+                    width: 40px;
+                    padding: 0 0 5px 3px;
                 }
             }
             .listStyle{
-                // width: 10px;
                 a{
-                    @include font(8px, 200, 20px, $pri-color);
-                    // width: 10px;
+                    @include font(12px, 400, 20px, $pri-color);
+                    width: 70%;
                 }
             }
         }
