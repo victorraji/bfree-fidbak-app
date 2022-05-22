@@ -11,36 +11,36 @@
 
 <div class="mainnavBox">
 <ul>
-<li><a href="/" class="active"><div class="homeBar">
+<li><router-link to="/HomeRView" class="active"><div class="homeBar">
 <div class="homeIcon">
 <font-awesome-icon :icon="['fas', 'home']"/>
 </div>
 <div class="homeP"><p>Home</p></div>
-</div></a></li>
+</div></router-link></li>
 <!-- notification bar -->
-<li><a href="/"><div class="notificationBar">
+<li><router-link to="/notR"><div class="notificationBar">
 <div class="notificationIcon">
 <font-awesome-icon :icon="['fas', 'bell']"/>
 </div>
 <div class="notificationP"><p>Notification</p></div>
-</div></a></li>
+</div></router-link></li>
 <!-- report -->
-<li><a href="."><div class="reportBar">
+<li><router-link to="/ReportR"><div class="reportBar">
 <div class="reportIcon">
 <font-awesome-icon :icon="['fas', 'area-chart']"/>
 </div>
 <div class="reportP"><p>Report</p></div>
-</div></a></li>
+</div></router-link></li>
 </ul>
 </div>
 <!-- logout  -->
 <div>
-<div class="logOut">
+<router-link to="/LogoutR"><div class="logOut">
 <div class="logOutI">
 <font-awesome-icon :icon="['fas', 'sign-out']"/>
 </div>
 <button class="logOutP">Log Out</button>
-</div>
+</div></router-link>
 </div>
 <!-- main end tag -->
 </div>
@@ -264,9 +264,8 @@ order: 1;
 flex-grow: 0;
 margin: 0px 26px;
 }
-.active, .mainnavBox ul li:hover {
-background-color: #00A4DB;
-
+a.router-link-active{
+background:black;
 }
 .mainnavBox ul li a {
 text-decoration: none;

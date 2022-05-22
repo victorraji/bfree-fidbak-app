@@ -28,12 +28,12 @@
 <input type="password" placeholder="Confirm Password" required />
 <label for="password" class="label-name"></label>
 </div>
-<div><button class="buttonUp">Sign Up</button></div>
+<div><router-link to="/SigninSuccess"><button class="buttonUp"><span>Sign Up</span></button></router-link></div>
 </div>
 </form>
 
 <div class="lastP">
-<p>Do you have an account already? <a href="/">Log in</a></p>
+<p>Do you have an account already? <router-link to="/signin">Log in</router-link></p>
 </div>
 </div>
 <div>
@@ -52,7 +52,8 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "/scss/style.scss";
 *{
 margin: 0px;
 padding: 0px;
@@ -69,7 +70,7 @@ width: 100%;
 }
 
 .logoImage {
-margin: -40px 800px 10px -180px;
+margin: -10px 800px 10px -180px;
 padding: 15px;
 background-color: #FFFFFF;
 }
@@ -133,7 +134,7 @@ font-weight: 300;
 font-size: 16px;
 line-height: 24px;
 color: #000000;
-margin-top: -200px;
+margin-top: -120px;
 }
 .lastP a {
 font-family: 'Poppins';

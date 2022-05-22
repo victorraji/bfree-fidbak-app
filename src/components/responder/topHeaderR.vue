@@ -38,7 +38,8 @@ export default {
 display: flex;
 justify-content: space-between;
 height: 99px;
-align-items: center;
+width: 920px;
+text-align: start;
 padding: 15px;
 }
 .iD {

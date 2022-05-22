@@ -2,8 +2,12 @@
   <div class="container">
         <Header/>
         <TheNav/>
-        <UserDetails/>
-        <Togglebar/>
+        <div class="detail">
+            <UserDetails/>
+        </div>
+        <div class="toggle">
+            <Togglebar/>
+        </div>
         <div class="main-content">
             <div class="scores">
                 <div class="measurement">
@@ -67,9 +71,9 @@ export default {
   },
   data () {
     return {
-      department: 'Enginering',
-      team: 'Production',
-      email: 'Ifeanyi'
+    //   department: 'Enginering',
+    //   team: 'Production',
+    //   email: 'Ifeanyi'
     }
     // user:
   }
@@ -79,67 +83,14 @@ export default {
 <style scoped>
 .container{
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
 }
-.user-details{
-    display: flex;
-    margin: 20px 250px 0 290px;
-    width: 93.42vw;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: start;
+.detail{
+    padding: 10% 0 0 0;
 }
-.bfr{
-    margin-left: -40px;
-}
-.portfolio{
-    margin-left: -40px;
-}
-.mail-path{
-    margin-left: -40px;
-}
-.reports{
-    display: flex;
-    height: 100%;
-    margin: 4% 250px;
-}
-.nps{
-    height: 74px;
-    width: 150px;
-    background: rgba(0, 164, 219, 0.27);
-    border-radius: 5px;
-    margin-left: 17px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-}
-.nps-icon{
-    padding: 10px;
-    color: #00A4DB;
-}
-.nps-text{
-    color: #00A4DB;
-}
-.poll{
-    height: 74px;
-    width: 150px;
-    background: rgba(0, 164, 219, 0.07);
-    border-radius: 5px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    margin-left: 2%;
-}
-.poll-icon{
-    padding: 10px;
-    color: rgba(0, 0, 0, 0.28);;
-}
-.poll-text{
-    color: rgba(0, 0, 0, 0.28);
-}
-strong{
-    margin-top: 3%;
+.toggle{
+    margin: 0 0 0 60px;
 }
 .main-content{
     display: grid;
@@ -181,7 +132,7 @@ strong{
     box-sizing: border-box;
     border-radius: 100px;
     width: 25vw;
-    height: 12px;
+    height: 2vh;
     margin-left: 5%;
     margin-top: 3%;
 }
@@ -212,7 +163,7 @@ strong{
     box-sizing: border-box;
     border-radius: 100px;
     width: 25vw;
-    height: 12px;
+    height: 2vh;
     margin-left: 5%;
     margin-top: 3%;
     margin-right: 1rem;
@@ -299,7 +250,7 @@ strong{
     background: #FFFFFF;
     border-radius: 5px;
     height: 12vh;
-    margin-left: -1rem;
+    /* margin-left: -1rem; */
 }
 .active2 p{
     margin-top: 1rem;
@@ -335,5 +286,14 @@ strong{
 }
 p{
     padding: 5px 40px;
+}
+@media (max-width: 700px) {
+    .main-content{
+    /* width: 75.42vw; */
+    height: 180vh;
+}
+   .scores {
+      visibility: hidden;
+   }
 }
 </style>

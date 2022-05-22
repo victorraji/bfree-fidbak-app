@@ -13,6 +13,7 @@ import signupR from '../views/signupR.vue'
 import signupwel from '../views/signupwel.vue'
 import feedback from '../views/feedback.vue'
 import not from '../views/not.vue'
+import notRating from '../views/notRating.vue'
 import notR from '../views/notR.vue'
 import notR1 from '../views/notR1.vue'
 import HomeRView from '../views/HomeRView.vue'
@@ -21,10 +22,13 @@ import ReportR from '../views/ReportR.vue'
 import Poll from '../views/Poll.vue'
 import PollR from '../views/PollR.vue'
 import Logout from '../views/Logout.vue'
+import LogoutR from '../views/LogoutR.vue'
+import New from '../views/New.vue'
+import NewR from '../views/NewR.vue'
+import WrongDetails from '../views/WrongDetails.vue'
+import WrongDetailR from '../views/WrongDetailR.vue'
 import SigninSuccess from '../views/SigninSuccess.vue'
 import SigninSuccessR from '../views/SigninSuccessR.vue'
-
-import LogoutR from '../views/LogoutR.vue'
 
 Vue.use(VueRouter)
 
@@ -38,6 +42,16 @@ const routes = [{
   path: '/signin',
   name: 'signin',
   component: signin
+},
+{
+  path: '/New',
+  name: 'New',
+  component: New
+},
+{
+  path: '/NewR',
+  name: 'NewR',
+  component: NewR
 },
 {
   path: '/signinR',
@@ -88,6 +102,11 @@ const routes = [{
   path: '/not',
   name: 'not',
   component: not
+},
+{
+  path: '/notRating',
+  name: 'notRating',
+  component: notRating
 },
 {
   path: '/notR',
@@ -148,6 +167,16 @@ const routes = [{
   path: '/ReportR',
   name: 'ReportR',
   component: ReportR
+},
+{
+  path: '/WrongDetails',
+  name: 'WrongDetails',
+  component: WrongDetails
+},
+{
+  path: '/WrongDetailR',
+  name: 'WrongDetailR',
+  component: WrongDetailR
 },
 {
   path: '/about',

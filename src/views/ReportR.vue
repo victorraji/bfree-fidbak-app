@@ -1,9 +1,13 @@
 <template>
   <div class="container">
-        <Header/>
-        <TheNav/>
-        <UserDetails/>
-        <Togglebar/>
+            <HeaderR/>
+            <TheNavR/>
+        <div class="header1">
+            <UserDetailR/>
+        </div>
+        <div class="toggleBox">
+            <TogglebarE/>
+        </div>
         <div class="main-content">
             <div class="scores">
                 <div class="measurement">
@@ -51,19 +55,19 @@
 </template>
 
 <script>
-import Header from '@/components/navbar/Header.vue'
-import TheNav from '@/components/navbar/TheNav.vue'
-import UserDetails from '@/components/reusables/UserDetails.vue'
-import Togglebar from '@/components/reusables/Togglebar.vue'
+import HeaderR from '@/components/responder/HeaderR.vue'
+import TheNavR from '@/components/responder/TheNavR.vue'
+import UserDetailR from '@/components/responder/UserDetailR.vue'
+import TogglebarE from '@/components/reusables/TogglebarE.vue'
 
 export default {
   name: 'reportR',
 
   components: {
-    Header,
-    TheNav,
-    UserDetails,
-    Togglebar
+    HeaderR,
+    TheNavR,
+    UserDetailR,
+    TogglebarE
   },
   data () {
     return {
@@ -82,64 +86,8 @@ export default {
     overflow-x: hidden;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
 }
-.user-details{
-    display: flex;
-    margin: 20px 250px 0 290px;
-    width: 93.42vw;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: start;
-}
-.bfr{
-    margin-left: -40px;
-}
-.portfolio{
-    margin-left: -40px;
-}
-.mail-path{
-    margin-left: -40px;
-}
-.reports{
-    display: flex;
-    height: 100%;
-    margin: 4% 250px;
-}
-.nps{
-    height: 74px;
-    width: 150px;
-    background: rgba(0, 164, 219, 0.27);
-    border-radius: 5px;
-    margin-left: 17px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-}
-.nps-icon{
-    padding: 10px;
-    color: #00A4DB;
-}
-.nps-text{
-    color: #00A4DB;
-}
-.poll{
-    height: 74px;
-    width: 150px;
-    background: rgba(0, 164, 219, 0.07);
-    border-radius: 5px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    margin-left: 2%;
-}
-.poll-icon{
-    padding: 10px;
-    color: rgba(0, 0, 0, 0.28);;
-}
-.poll-text{
-    color: rgba(0, 0, 0, 0.28);
-}
-strong{
-    margin-top: 3%;
+.header1{
+    padding: 7% 0 0 0;
 }
 .main-content{
     display: grid;
@@ -181,7 +129,7 @@ strong{
     box-sizing: border-box;
     border-radius: 100px;
     width: 25vw;
-    height: 12px;
+    height: 2vh;
     margin-left: 5%;
     margin-top: 3%;
 }
@@ -212,7 +160,7 @@ strong{
     box-sizing: border-box;
     border-radius: 100px;
     width: 25vw;
-    height: 12px;
+    height: 2vh;
     margin-left: 5%;
     margin-top: 3%;
     margin-right: 1rem;

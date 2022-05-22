@@ -2,12 +2,12 @@
   <div class="container">
     <div class="text-wrapper">
       <div class="logo-holder">
-        <img src="../assets/bfreeLogo.png" alt="fidbak logo">
-        <img src="../assets/fidbak.png" alt="fidbak logo">
+        <img src="../assets/bfreeLogo.png" alt="fidbak logo" class="bfreeLogo"/>
+        <img src="../assets/fidbak.png" alt="fidbak logo" class="fidbakLogo"/>
       </div>
       <div class="pages-body">
         <div class="body-text">
-          <p class="header-text">Bridging<br> <span>communication gap</span><br> in the organisation.</p><br><br><br>
+          <p class="header-text">Bridging the<br> <span>communication gap</span><br> in the organisation.</p><br><br><br>
           <p class="description-text">A creative platform to encourage effective <span>communication</span> between Account Managers, Engineers and operations team within the organisation.</p>
           <router-link to="/signupwel" style="text-decoration: none; color: inherit"><button><strong>Get started</strong></button></router-link>
         </div>
@@ -20,62 +20,71 @@
 </template>
 
 // STYLE
-<style scoped>
+<style lang="scss" scoped>
+@import "/scss/style.scss";
 *{
   margin: 0;
   padding: 0;
 }
-
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100%;
+  // min-height: 100vh;
   width: 100%;
-  grid-column-gap: 10px;
-  overflow-x: hidden;
-  position: fixed;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 .text-wrapper{
   display: grid;
   grid-template-rows: 1fr 5fr;
-  /* margin-left: 70px; */
-  padding: 0 10% 100% 10%;
-  /* margin-bottom: 100px; */
+  padding: 0px 0px 0px 5%;
+  background: rgba(0, 164, 219, 0.03);
 }
 .logo-holder{
-  margin-top: 30px;
+  width: 346px;
+  height: 77px;
+  margin: 30px 0 0 0;
   text-align: start;
+  .bfreeLogo{
+    width: 60px;
+  }
+  .fidbakLogo{
+    width: 180px;
+    padding-bottom: 10px;
+  }
 }
 
 .pages-body{
-  display: grid;
-  grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-items: start;
-  /* grid-gap: 5%; */
+  padding: 10% 0 0 5%;
+  background: #fff;
+  height: 75vh;
+  width: 40vw;
 }
 
-/* Bridging communication gap in the company */
+.body-text{
+  background: #fff;
+}
+
 .header-text{
-  font-family: "poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 45px;
   line-height: 55px;
   text-align: start;
-  margin-top: 15%;
 }
 span{
   color: #00A4DB;
 }
 .description-text{
-  /* position: static; */
   width: 430px;
   height: 72px;
-  top: 0;
-  font-display: open sans;
+  margin-top: -25px;
+  font-family: 'poppins';
   font-style: normal;
   font-weight: 600px;
   font-size: 16px;
@@ -89,20 +98,54 @@ button{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 5% 10%;
+  padding: 2% 10%;
+  margin: 40px 0 0 0;
   width: 380px;
   height: 55px;
-  left: 0px;
-  margin-top: 10%;
   background: #00A4DB;
+  border: 4px solid #00A4DB;
   box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   color: #f7f7f7;
+  & strong{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.5s;
+        &::after{
+            content: '\2192';
+            transition: 0.5s;
+            opacity: 0;
+            margin-left: 20px;
+        }
+    }
+    &:hover strong{
+        padding-right: 25px;
+        &::after{
+            opacity: 1;
+        }
+    }
 }
 
 .body-image{
-  position: relative;
-  margin-left: 60px;
-  background: rgba(181, 215, 227, 0.31);;
+  background: rgba(181, 215, 227, 0.31);
 }
+/* @media screen and (max-width: 450px) {
+  .container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .body-text{
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 15px;
+    text-align: start;
+  }
+} */
 </style>

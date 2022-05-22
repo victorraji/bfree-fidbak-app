@@ -9,7 +9,7 @@
           <p class="header-text">Bridging<br> <span>communication gap</span><br> in the organisation.</p><br><br><br>
           <p class="description-text">A creative platform to encourage effective <span>communication</span> between Account Managers, Engineers and operations team within the organisation.</p>
           <!-- <router-link to="/" style="text-decoration: none; color: inherit"><button><strong>Log Out</strong></button></router-link> -->
-              <button class="button" @click="showModal = true">Log Out</button>
+              <button class="button" @click="showModal = true">Get Started</button>
                 <transition name="fade" appear>
                     <div class="modal-overlay" v-if="showModel" @click="showModal = false"></div>
                 </transition>
@@ -17,7 +17,7 @@
                     <div class="modal" v-if="showModal">
                         <div class="confirmation"><strong>Are you sure you want to logout?</strong></div>
                         <div class="choice">
-                          <button class="yes" @click="logout = true"><router-link to="/signin"> Yes, please!</router-link></button>
+                          <button class="yes" @click="logout = true"><router-link to="/signinR"> Yes, please!</router-link></button>
                           <button class="no" @click="showModal = false">No, please go back</button>
                         </div>
                         <!-- <button class="button" @click="showModal = false">Close modal</button> -->

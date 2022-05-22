@@ -1,9 +1,9 @@
 <template>
     <div class="reports">
-        <router-link to="/Report">
+        <router-link to="/ReportR">
             <div class="nps"><img src="../../assets/report.png" class="nps-icon"/><br><span class="nps-text">NPS Report</span></div>
         </router-link>
-        <router-link to="poll">
+        <router-link to="pollR">
             <div class="poll"><img src="../../assets/poll.png" class="nps-icon"/><br><span class="nps-text"> Engage Poll</span></div>
         </router-link>
     </div>

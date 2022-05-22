@@ -10,7 +10,7 @@
         <form>
           <input type="email" required placeholder="Email Address" font-awesome-icon :icon="['fas' ,'email']" />
         </form>
-         <button @click="reset()">Reset Password</button>
+         <button @click="reset"><a href="/NewR"> Reset Password</a></button>
       </div>
       <div class="body-image">
         <img src="../assets/landingimage.svg" alt="landing-image" />
@@ -100,5 +100,9 @@ input {
   height: 30px;
   border-radius: 4px;
   margin-top: 20px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
 }
 </style>

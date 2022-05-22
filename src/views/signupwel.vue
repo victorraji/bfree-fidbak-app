@@ -9,20 +9,22 @@
 <!-- for the sentences -->
 <div class="pageSentences">
 <div class="sen1"><p>Create Account</p></div>
-<div class="sen2"><p>Note that there are two tabs created, you are either creating an account as a Receiver or Responder;</p></div>
+<div class="sen2">
+    <p>Note that there are two tabs created, you are either creating <br> an account as a Receiver or Sender;</p>
+</div>
 <div class="sen3">
 <ul>
-<li>If you are signing up as an Account Manager, Select the Receiver button below</li>
-<li>If you are signing up as an Engineer, or Operations, Select the Responder button below</li>
+<li>If you are signing up as an Account Manager, Select<br> the <span>Receiver</span> button below</li>
+<li>If you are signing up as an Engineer, or Operations,<br> Select the <span>Sender</span> button below</li>
 </ul>
 </div>
-<div>
-<a href="/SignupR"><button class="button1">Responder</button></a>
+<div class="btn1">
+<a href="/SignupR"><button class="button1">Sender</button></a>
 <a href="/Signup"><button class="button1">Receiver</button></a>
 </div>
 </div>
 <div class="lastP">
-<p>Do you have an account already? <a href="/">Log in</a></p>
+<p>Do you have an account already? <router-link to="/signin">Log in</router-link></p>
 </div>
 
 </div>
@@ -59,7 +61,7 @@ height: 100vh;
 width: 100%;
 }
 .logoImage {
-margin: -40px 800px 10px -180px;
+margin: -10px 800px 10px -180px;
 padding: 15px;
 background-color: #FFFFFF;
 }
@@ -81,16 +83,20 @@ font-weight: 700;
 font-size: 20px;
 line-height: 30px;
 color: #000000;
-padding-right: 380px;
+text-align: start;
+padding: 4% 0 0 6%;
 }
-.sen2 p {
+.sen2{
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
+width: 100%;
 font-size: 16px;
 line-height: 24px;
 color: #000000;
-padding-right: 150px;
+text-align: start;
+padding-left: 6%;
+padding-bottom: 15px;
 }
 .sen3 {
 font-family: 'Poppins';
@@ -98,7 +104,11 @@ font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;
+padding-left: 10%;
 color: #000000;
+}
+.btn1 {
+    margin-left: 3%;
 }
 .button1 {
 background: rgba(0, 164, 219, 0.07);
@@ -117,6 +127,7 @@ color: rgba(0, 0, 0, 0.28);
 .button1:hover {
 background: rgba(0, 164, 219, 0.27);
 color: #00A4DB;
+border-bottom: 4px solid #00A4DB;
 }
 .lastP {
 font-family: 'Poppins';
@@ -125,7 +136,7 @@ font-weight: 300;
 font-size: 16px;
 line-height: 24px;
 color: #000000;
-margin-top: 100px;
+margin: 20px 0 0 40px;
 }
 .lastP a {
 font-family: 'Poppins';
@@ -134,5 +145,14 @@ font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 color: #00A4DB;
+}
+ul{
+    text-align: start;
+}
+ul :nth-child(1){
+    padding-bottom: 15px;
+}
+ul span{
+    color: #00A4DB;
 }
 </style>

@@ -1,9 +1,13 @@
 <template>
   <div>
     <HeaderR/>
-    <TheNav/>
-    <UserDetailR/>
-    <ToggleR/>
+    <TheNavR/>
+    <div class="detail">
+        <UserDetailR/>
+    </div>
+    <div class="toggle">
+        <TogglebarE/>
+    </div>
     <div class="container">
         <div></div>
         <div></div>
@@ -64,17 +68,17 @@
 
 <script>
 import HeaderR from '@/components/responder/HeaderR.vue'
-import TheNav from '@/components/navbar/TheNav.vue'
+import TheNavR from '@/components/responder/TheNavR.vue'
 import UserDetailR from '@/components/responder/UserDetailR.vue'
-import ToggleR from '@/components/responder/ToggleR.vue'
+import TogglebarE from '@/components/reusables/TogglebarE.vue'
 
 export default {
-  name: 'PollResponder',
+  name: 'ReportEngage',
   components: {
     HeaderR,
-    TheNav,
+    TheNavR,
     UserDetailR,
-    ToggleR
+    TogglebarE
   }
 }
 </script>
@@ -91,6 +95,12 @@ export default {
     width: 89%;
     margin-left: 5%;
     background-color: $white;
+}
+.detail{
+    padding: 10% 0 0 0;
+}
+.toggle{
+    margin: 0 0 0 60px;
 }
 .container{
     display: flex;

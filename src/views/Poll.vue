@@ -2,8 +2,12 @@
   <div>
     <Header/>
     <TheNav/>
-    <UserDetails/>
-    <ToggleR/>
+    <div class="detail">
+        <UserDetails/>
+    </div>
+    <div class="toggle">
+        <Togglebar/>
+    </div>
     <div class="container">
         <div></div>
         <div></div>
@@ -66,7 +70,7 @@
 import Header from '@/components/navbar/Header.vue'
 import TheNav from '@/components/navbar/TheNav.vue'
 import UserDetails from '@/components/reusables/UserDetails.vue'
-import ToggleR from '@/components/responder/ToggleR.vue'
+import Togglebar from '@/components/reusables/Togglebar.vue'
 
 export default {
   name: 'ReportEngage',
@@ -74,7 +78,7 @@ export default {
     Header,
     TheNav,
     UserDetails,
-    ToggleR
+    Togglebar
   }
 }
 </script>
@@ -91,6 +95,12 @@ export default {
     width: 89%;
     margin-left: 5%;
     background-color: $white;
+}
+.detail{
+    padding: 10% 0 0 0;
+}
+.toggle{
+    margin: 0 0 0 60px;
 }
 .container{
     display: flex;

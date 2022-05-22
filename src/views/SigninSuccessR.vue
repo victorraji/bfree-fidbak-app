@@ -2,13 +2,13 @@
   <div class="wrapper">
       <div class="text">
           <div class="logo">
-              <img src="../assets/bfreeLogo.svg" alt="fidbak logo">
-              <img src="../assets/fidbak.png" alt="">
+              <img src="../assets/logo.jpg" alt="fidbak logo">
           </div>
           <div class="confirmation">
-            <div class="circle"><font-awesome-icon :icon="['fas', 'check']" class="icon"/></div>
-            <div class="textStyle">Account Created<br>Successfully</div>
-            <router-link to="signinR"><button><strong>Log in</strong></button></router-link>
+            <!-- <div class="circle"><font-awesome-icon :icon="['fas', 'check']" class="icon"/></div> -->
+            <div class="circle"><img src="../assets/passmark.png"></div>
+            <div class="textStyle">Account Created<br>Successfully!</div>
+            <router-link to="signinR"><button><span>Log in</span></button></router-link>
           </div>
       </div>
           <img src="../assets/man.png" alt="" class="image"/>
@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
 }
 </script>
@@ -41,20 +40,9 @@ export default {
             grid-template-rows: 1fr 1fr 1fr;
             height: 45vh;
             justify-content: center;
-            .circle{
-                height: 15vh;
-                width: 8vw;
-                background: $pri-color;
-                border-radius: 50%;
-                line-height: 15vh;
-                margin:0 0 5% 30%;
-                .icon{
-                    height: 5vh;
-                    width: 5vw;
-                    margin-top: 30%;
-                    color: $white;
-                }
-            }
+            // .circle{
+            //     // margin:0 0 5% 10%;
+            // }
             .textStyle{
                 @include font( 30px, 700, 2, $black);
                 margin-bottom: 20px;
@@ -62,8 +50,9 @@ export default {
         }
     }
     .image{
-        width: 150%;
+        width: 154%;
         height: 100vh;
+        margin-top: -8px;
     }
 }
 </style>
