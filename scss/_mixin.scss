@@ -18,8 +18,7 @@
     display: $grid;
     grid-template-rows: repeat($repeat, $fraction);
     grid-gap: $x-gap $y-gap;
-  }
-  
+  }  
   $sizes: 40px, 50px, 80px;
   @each $size in $sizes {
     .icon-#{$size} {
