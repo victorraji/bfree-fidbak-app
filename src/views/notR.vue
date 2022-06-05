@@ -84,10 +84,10 @@ background: #F7F7F7;
 border: 0.5px solid rgba(0, 0, 0, 0.49);
 box-sizing: border-box;
 display: flex;
-width: 83.1%;
+width: 90%;
 flex-direction: column;
 align-items: center;
-margin: 70px 0 0 120px;
+margin: 70px 0 0 50px;
 }
 .nav2 {
 grid-area: nav2;
@@ -102,7 +102,7 @@ margin: 0 0 0 45px;
 }
 .fmessage {
 background: #00A4DB;
-width: 907px;
+width: 967px;
 }
 .fmessage p {
 font-family: 'Poppins';
@@ -142,6 +142,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .input2 {
 background: #00A4DB;
 border-radius: 5px;
+border: 8px #00A4DB solid;
 margin: 40px;
 width: 384px;
 height: 50px;

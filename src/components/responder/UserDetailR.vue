@@ -40,7 +40,7 @@ justify-content: space-between;
 height: 99px;
 width: 70%;
 text-align: start;
-margin-left: 28%;
+margin-left: 22%;
 background-color: #fff;
 padding: 15px;
 }

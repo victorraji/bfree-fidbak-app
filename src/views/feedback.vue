@@ -1,178 +1,129 @@
 <template>
-<div class="feedBackMain">
-<div class="mainGrid">
-<!-- rectangle 59 hello bplade rectangle -->
-<div class="rectangle29">
-<!-- <div class="topIcons"> -->
-<Header/>
-<!-- <div class="boladeT"><p>Hello Bolade!</p></div>
-<div class="frame53">
-<div class="searchIcon">
-<font-awesome-icon :icon="['fas', 'search']"/>
-</div>
-<div class="notification68">
-<div class="notification68I">
-<font-awesome-icon :icon="['fas', 'fa-bell']"/>
-</div>
-<div class="number4">
-<div class="number">
-<div class="four">4</div>
-</div>
-</div>
-</div>
-<div class="userCircle">
-<font-awesome-icon :icon="['fas', 'user-circle']"/>
-</div>
-<div class="cogIcon">
-<font-awesome-icon :icon="['fas', 'fa-cog']"/>
-</div>
-</div> -->
-<!-- </div> -->
-</div>
-<div class="topDetails">
-<UserDetails/>
-<!-- <div class="staffId">
-<div class="iD">
-<p>Staff ID</p>
-</div>
-<div class="frame">
-<div class="siD">
-<p>BFR00055</p>
-</div>
+  <div class="feedBackMain">
+    <div class="mainGrid">
+    <!-- rectangle 59 hello bplade rectangle -->
+      <div class="rectangle29">
+        <Header/>
+      </div>
+      <div class="topDetails">
+        <UserDetails/>
+      </div>
+    <!-- main body -->
+      <div class="mainBorder">
+      <!-- complaint box -->
+        <form>
+          <div class="complaintBox">
+            <div class="text1"><p>Fill the form below to submit your complaints or issues</p></div>
+          <!-- first dropdown -->
+            <div class="departmentBox">
+              <div class="frame96">
+                <div id="dropdownlist">
+                  <ejs-dropdownlist :data-source='localData' :fields='localField' placeholder="Department">
 
-</div>
-</div>
-<div class="accountM">
-<div class="acc">
-<p>Account Manager</p>
-</div>
-<div class="teamN"><p>Branch</p></div>
-</div>
-<div class="amEmail">
-<div class="eTag"><p>Email</p></div>
-</div>
-<div class="emailAddress"><p>bolade@bfree.limited</p></div> -->
-</div>
-<!-- main body -->
-<div class="mainBorder">
-<!-- complaint box -->
-<form>
-<div class="complaintBox">
-<div class="text1"><p>Fill the form below to submit your complaints or issues</p></div>
-<!-- first dropdown -->
-<div class="departmentBox">
-<div class="frame96">
-<div id="dropdownlist">
-<ejs-dropdownlist :data-source='localData' :fields='localField' placeholder="Department">
+                  </ejs-dropdownlist>
+                </div>
+              </div>
+            </div>
+          <!-- 2nd dropdown -->
+            <div class="receivingDepartment">
+              <div class="frame962">
+                <div id="dropdownlist2">
+                  <ejs-dropdownlist :data-source='localData2' :fields='localField2' placeholder="Receiving Department">
 
-</ejs-dropdownlist>
-</div>
-</div>
-</div>
-<!-- 2nd dropdown -->
-<div class="receivingDepartment">
-<div class="frame962">
-<div id="dropdownlist2">
-<ejs-dropdownlist :data-source='localData2' :fields='localField2' placeholder="Receiving Department">
+                  </ejs-dropdownlist>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- textarea -->
+        <div class="text2"><p>What are your challenges?</p></div>
+          <div>
+            <label for="textarea1"></label>
+            <textarea class="text3"></textarea>
+          </div>
+        <button class="input2" @click="showModal = false">Submit Complaint Now</button>
+          <transition name="fade" appear>
+            <div class="modal-overlay" v-if="showModal">
 
-</ejs-dropdownlist>
-</div>
-</div>
-</div>
-</div>
-<!-- textarea -->
-<div class="text2"><p>What are your challenges?</p></div>
-<div>
-<label for="textarea1"></label>
-<textarea class="text3"></textarea>
-</div>
-<button class="input2" @click="showModal = false">Submit Complaint Now</button>
-<transition name="fade" appear>
-<div class="modal-overlay" v-if="showModal">
+            </div>
+          </transition>
+        </form>
+      <!-- create poll box -->
+      <div class="pollBox">
+      <div class="textEngage"><p>Create a poll for your team and engage in one below</p></div>
+      <!-- form for option boxes -->
+      <form>
+      <!-- ist box -->
+      <div class="createInput">
+      <div>
+      <label for="text" id="pollIn"></label>
+      <input value="create a Poll">
+      </div>
 
-</div>
-</transition>
-</form>
-<!-- create poll box -->
-<div class="pollBox">
-<div class="textEngage"><p>Create a poll for your team and engage in one below</p></div>
-<!-- form for option boxes -->
-<form>
-<!-- ist box -->
-<div class="createInput">
-<div>
-<label for="text" id="pollIn"></label>
-<input value="create a Poll">
-</div>
+      </div>
+      <!-- 2nd box -->
+      <div class="tNQInput">Topic or Question</div>
+      <div class="tNQInputBox">
+      <label for="text"></label>
+      <input type="text">
+      </div>
+      <!-- 3rd box -->
+      <div class="option1">Option 1</div>
+      <div class="option1Box">
+      <label for="text"></label>
+      <input type="text">
+      </div>
+      <!-- 4th -->
+      <div class="option2">Option 2</div>
+      <div class="option2Box">
+      <label for="text"></label>
+      <input type="text">
+      </div>
+      <!-- 5th -->
+      <div class="option3">Option 3 (optional)</div>
+      <div class="option3Box">
+      <label for="text"></label>
+      <input type="text">
+      </div>
+      <!-- 6th -->
+      <div class="option4">Option 4 (optional)</div>
+      <div class="option4Box">
+      <label for="text"></label>
+      <input type="text">
+      </div>
+      <!-- create poll submit button -->
 
-</div>
-<!-- 2nd box -->
-<div class="tNQInput">Topic or Question</div>
-<div class="tNQInputBox">
-<label for="text"></label>
-<input type="text">
-</div>
-<!-- 3rd box -->
-<div class="option1">Option 1</div>
-<div class="option1Box">
-<label for="text"></label>
-<input type="text">
-</div>
-<!-- 4th -->
-<div class="option2">Option 2</div>
-<div class="option2Box">
-<label for="text"></label>
-<input type="text">
-</div>
-<!-- 5th -->
-<div class="option3">Option 3 (optional)</div>
-<div class="option3Box">
-<label for="text"></label>
-<input type="text">
-</div>
-<!-- 6th -->
-<div class="option4">Option 4 (optional)</div>
-<div class="option4Box">
-<label for="text"></label>
-<input type="text">
-</div>
-<!-- create poll submit button -->
+      <button class="input2" @click="showModal = false">Create Poll</button>
+      <transition name="fade" appear>
+      <div class="modal-overlay" v-if="showModal">
 
-<button class="input2" @click="showModal = false">Create Poll</button>
-<transition name="fade" appear>
-<div class="modal-overlay" v-if="showModal">
+      </div>
 
-</div>
+      </transition>
+      </form>
+      <div class="popup">
+      <transition name="slide" appear>
+      <div class="popup-inner" v-if="showModal">
+      <div class="popupP">
+      <p>{{alertWord()}}</p>
+      </div>
+      <button class="popup-close" @click="showModal=false">
+      Submit Another Response
+      </button>
+      <router-link to="/not"><button class="popup-close2" @click="showModal=false">View Response</button></router-link>
+      </div>
+      </transition>
+      </div>
+      <!-- ending tag for poll box -->
+      </div>
+      <!-- ending tag for both complaint and poll boxes -->
+      </div>
 
-</transition>
-</form>
-<div class="popup">
-<transition name="slide" appear>
-<div class="popup-inner" v-if="showModal">
-<div class="popupP">
-<p>{{alertWord()}}</p>
-</div>
-<button class="popup-close" @click="showModal=false">
-Submit Another Response
-</button>
-<router-link to="/not"><button class="popup-close2" @click="showModal=false">View Response</button></router-link>
-</div>
-</transition>
-</div>
-<!-- ending tag for poll box -->
-</div>
-<!-- ending tag for both complaint and poll boxes -->
-</div>
-
-<div class="frame59">
-  <TheNav/>
-</div>
-<!-- </div> -->
-</div>
-<!-- top details -->
-</div>
-
-<!-- </div> -->
+      <div class="frame59">
+        <TheNav/>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 import TheNav from '@/components/navbar/TheNav.vue'
@@ -660,173 +611,10 @@ top: 17.5px;
 color: #ffffff;
 opacity: .4;
 }
-/*top detail CSS*/
 .topDetails {
-position: absolute;
+margin: 10% 0 0 -77px;
 width: 100%;
-height: 68px;
-left: 0;
-top: 131px;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
 }
-/* .staffId {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-position: static;
-width: 123px;
-height: 68px;
-left: 0px;
-top: 0px;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 296px;
-} */
-/*left: 0px is not moving this to the left, had to change*/
-/* .iD {
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 30px;
-position: absolute;
-width: 74px;
-height: 30px;
-left: 3px;
-top: -10px;
-color: #000000;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 2px 0px;
-}
-.frame {
-position: static;
-width: 123px;
-height: 36px;
-left: 0px;
-top: 32px;
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 2px 0px;
-} */
-/*removed top measurement*/
-/* .siD {
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 30px;
-position: absolute;
-width: 98px;
-height: 30px;
-left: 0px;
-top: 20px;
-}
-.accountM {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-position: absolute;
-width: 183px;
-height: 60px;
-left: 200px;
-top: 0px;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 296px;
-}
-.acc{
-position: absolute;
-width: 183px;
-height: 30px;
-left: -150px;
-top: -10px;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 0px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 30px;
-}
-.teamN {
-position: absolute;
-width: 71px;
-height: 30px;
-left: -140px;
-top: 20px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 30px;
-color: #000000;
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 0px;
-}
-.amEmail {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-position: static;
-width: 217px;
-height: 60px;
-left: 898px;
-top: 0px;
-flex: none;
-order: 2;
-flex-grow: 0;
-margin: 0px 296px;
-}
-.eTag {
-position: absolute;
-width: 58px;
-height: 30px;
-left: 900px;
-top: -10px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 30px;
-color: #000000;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 0px;
-}
-.emailAddress {
-position: absolute;
-width: 217px;
-height: 30px;
-left: 882px;
-top: 25px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 30px;
-color: #000000;
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 0px;
-} */
-/*CSS for main border*/
 .mainBorder {
 position: absolute;
 width: 1131px;

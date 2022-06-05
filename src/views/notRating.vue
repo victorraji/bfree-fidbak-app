@@ -2,7 +2,7 @@
     <div class="main1">
         <Header/>
         <TheNav/>
-        <UserDetails/>
+        <div class="details"><UserDetails/></div>
         <main class="main">
             <div class="feedback-header">
                 <h4>Feedback Message</h4>
@@ -81,53 +81,56 @@ export default {
 .main {
     @include grid(grid, 1, fraction, 20px, 0);
     height: 830px;
-    width: 70%;
-    margin-left: 26%;
+    width: 75%;
+    margin-left: 23%;
     background: #F7F7F7;
     border: 0.5px solid rgba(0, 0, 0, 0.49);
     box-sizing: border-box;
     // opacity: 0.3;
     // filter: blur(3px);
-}
-.feedback-header {
-width: 100%;
-height: 7vh;
-text-align: start;
-line-height: 7vh;
-text-indent: 2rem;
-background: #00A4DB;
-color: $white;
-}
-.textArea {
-background: #FFFFFF;
-border: 0.3px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-width: 80%;
-height: 59vh;
-margin:30px 30px 30px 70px;
-& p{
-    @include font(18px, 500, 27px, $black);
-    text-align: start;
-    margin: 2rem 1rem 0 2rem;
+    .feedback-header {
+      width: 100%;
+      height: 7vh;
+      text-align: start;
+      line-height: 7vh;
+      text-indent: 2rem;
+      background: #00A4DB;
+      color: $white;
+      }
+      .textArea {
+      background: #FFFFFF;
+      border: 0.3px solid #000000;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      width: 85%;
+      height: 59vh;
+      margin: -80px 30px 30px 70px;
+      & p{
+          @include font(18px, 500, 27px, $black);
+          text-align: start;
+          margin: 2rem 1rem 0 2rem;
 
+      }
+  }
+  .btn{
+      @include grid(grid, 0.5, fraction, 0, 0);
+      justify-content: center;
+      margin-top: -120px;
+      & button{
+          height: 3vw;
+      }
+      .input2{
+          margin-top: -70px;
+          background: #FFFFFF;
+          border: 1px solid #00A4DB;
+          box-sizing: border-box;
+          border-radius: 5px;
+          color: $pri-color;
+      }
+  }
 }
-}
-.btn{
-    @include grid(grid, 0.5, fraction, 0, 0);
-    justify-content: center;
-    margin-top: -120px;
-    & button{
-        height: 3vw;
-    }
-    .input2{
-        margin-top: -70px;
-        background: #FFFFFF;
-        border: 1px solid #00A4DB;
-        box-sizing: border-box;
-        border-radius: 5px;
-        color: $pri-color;
-    }
+.details{
+  margin: 10% 0 30px -77px;
 }
 .popup {
 @include font(20px, 500, 30px, $black);
@@ -159,7 +162,7 @@ border-radius: 21px;
           &::before{
             @include font(50px, 900, none, none);
             content: "\f005";
-            font-family: 'FontAwesome';
+            font-family: 'FontAwesome 5 Free';
             display: block;
             top: 0;
             opacity: 0;

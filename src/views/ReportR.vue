@@ -95,7 +95,7 @@ export default {
     width: 75.42vw;
     height: 130vh;
     top: 60%;
-    margin-left: 26%;
+    margin-left: 23%;
     margin-bottom: 5%;
     background-color: #F7F7F7;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25)

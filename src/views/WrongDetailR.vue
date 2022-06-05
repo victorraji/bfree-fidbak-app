@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-      <div class="logo">
-          <div class="logo-wrapper">
-            <img src="../assets/bfreeLogo.png" alt="">
-            <img src="../assets/fidbak.png" alt="">
-          </div>
-      </div>
+      <!-- <div class="logo">
+      </div> -->
       <div class="contentBox">
           <div class="textArea">
+            <div class="logo-wrapper">
+                <img src="../assets/logo.jpg" alt="Fidbak Logo">
+                <!-- <img src="../assets/fidbak.png" alt=""> -->
+            </div>
             <div><p>Enter your valid email address and password to sign in</p></div>
             <div class="ui_text_field">
                 <input type="text" name="email" value="" onchange="this.setAttribute('value', this.value)" required/>
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="imageBox">
-              <img src="../assets/istockphoto-1132284560-612x612 1.jpg" alt="A man working with a Laptop">
+              <img src="../assets/istockphoto-1132284560-612x612 1.jpg" class="imageBox" alt="A man working with a Laptop">
           </div>
       </div>
   </div>
@@ -46,17 +46,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "/scss/style.scss";
-.container{
-    margin: 0 auto;
+*{
+    margin: 0;
     padding: 0;
-    .logo{
-    width: 100%;
-    height: 18vh;
-    text-align: start;
-    text-indent: 2rem;
-    line-height: 18vh;
-    background: $white;
-    }
+}
+.container{
     .contentBox{
         @include flex(flex, start, start, columns);
         @include font(17px, 300, 26px, $black);
@@ -65,7 +59,7 @@ export default {
         .textArea{
             @include grid(grid, 7, 7, 10%, 0px);
             text-align: start;
-            margin: 50px 0 0 40px;
+            margin: 20px 0 0 40px;
             .ui_text_field{
                 width: 70%;
                 position: relative;
@@ -110,15 +104,15 @@ export default {
             .resetArea{
                 padding-left: 2rem;
             }
+            .logo-wrapper{
+                margin-bottom: 8%;
+            }
         }
     }
     .imageBox{
-        margin-right: -10px;
-        & img{
-            width: 58vw;
-            height: 78vh;
-            margin-left: 40px;
-        }
+        width: 58vw;
+        height: 100vh;
+        margin: -20px -20px 0 20px;
     }
     a{
         text-decoration: none;
