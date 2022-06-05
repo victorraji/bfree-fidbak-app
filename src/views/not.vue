@@ -1,88 +1,90 @@
 <template>
-<div class="home">
-<!-- <div class="header"> -->
-<Header/>
-<!-- </div> -->
-<div class="nav">
-<TheNav/>
-</div>
-<HeadD/>
-<!-- group 89 drop downs -->
-<div class="dropdown89">
-<div class="feedbacks">
-<ejs-dropdownlist :data-source='localData1' :fields='localField1' placeholder="Feedbacks">
+  <div class="home">
+    <!-- <div class="header"> -->
+    <Header/>
+    <!-- </div> -->
+    <div class="nav">
+      <TheNav/>
+    </div>
+    <div class="userDetails"><UserDetails/></div>
+  <!-- group 89 drop downs -->
+    <div>
+      <div class="dropdown89">
+        <div class="feedbacks">
+          <ejs-dropdownlist :data-source='localData1' :fields='localField1' placeholder="Feedbacks">
 
-</ejs-dropdownlist>
-</div>
-<div class="responses">
-<ejs-dropdownlist :data-source='localData2' :fields='localField2' placeholder="Responses">
+          </ejs-dropdownlist>
+        </div>
+        <div class="responses">
+          <ejs-dropdownlist :data-source='localData2' :fields='localField2' placeholder="Responses">
 
-</ejs-dropdownlist>
-</div>
-<div class="sort">
-<ejs-dropdownlist :data-source='localData3' :fields='localField3' placeholder="Sort">
+          </ejs-dropdownlist>
+        </div>
+        <div class="sort">
+          <ejs-dropdownlist :data-source='localData3' :fields='localField3' placeholder="Sort">
 
-</ejs-dropdownlist>
-</div>
-<div class="receivingD">
-<ejs-dropdownlist :data-source='localData' :fields='localField' placeholder="Receiving department">
+          </ejs-dropdownlist>
+        </div>
+        <div class="receivingD">
+          <ejs-dropdownlist :data-source='localData' :fields='localField' placeholder="Receiving department">
 
-</ejs-dropdownlist>
-</div>
-</div>
-<!-- main body -->
-<div class="mainBody">
-<div id="list">
-<ul>
-<li class="survey">
-<span>S/N</span>
-<span>Name</span>
-<span>Receiving Department</span>
-<span>Date/Time</span>
-<span>Status</span>
-</li>
+          </ejs-dropdownlist>
+        </div>
+      </div>
+    </div>
+  <!-- main body -->
+    <div class="mainBody">
+      <div id="list">
+        <ul>
+          <li class="survey">
+            <span>S/N</span>
+            <span>Name</span>
+            <span>Receiving Department</span>
+            <span>Date/Time</span>
+            <span>Status</span>
+          </li>
 
-<!-- row 2 -->
+        <!-- row 2 -->
 
-<li v-for='notlist in notlists' :key='notlist.id' class="survey">
-<span>1.</span>
-<span>Micheal</span>
-<span>Team-Lead Branch</span>
-<span>11/03 09/33</span>
-<span><button>read</button></span>
-</li>
-<!-- row 3 -->
-<li v-for='notlist in notlists' :key='notlist.id' class="survey">
-<span>2.</span>
-<span>Bimpe</span>
-<span>Team-Lead Branch</span>
-<span>11/03 09/33</span>
-<span><button>read</button></span>
-</li>
-<!-- row 4 -->
-<li v-for='notlist in notlists' :key='notlist.id' class="survey">
-<span>2.</span>
-<span>Bimpe</span>
-<span>Team-Lead Branch</span>
-<span>11/03 09/33</span>
-<span><button>read</button></span>
-</li>
-</ul>
+          <li v-for='notlist in notlists' :key='notlist.id' class="survey">
+            <span>1.</span>
+            <span>Micheal</span>
+            <span>Team-Lead Branch</span>
+            <span>11/03 09/33</span>
+            <span><button>read</button></span>
+          </li>
+        <!-- row 3 -->
+          <li v-for='notlist in notlists' :key='notlist.id' class="survey">
+            <span>2.</span>
+            <span>Bimpe</span>
+            <span>Team-Lead Branch</span>
+            <span>11/03 09/33</span>
+            <span><button>read</button></span>
+          </li>
+        <!-- row 4 -->
+          <li v-for='notlist in notlists' :key='notlist.id' class="survey">
+            <span>2.</span>
+            <span>Bimpe</span>
+            <span>Team-Lead Branch</span>
+            <span>11/03 09/33</span>
+            <span><button>read</button></span>
+          </li>
+        </ul>
 
-</div>
-</div>
-<div>
-<button class="buttons">Previous</button>
-<button class="buttons">Next</button>
-</div>
-</div>
+      </div>
+    </div>
+  <div class="next">
+  <button class="buttons">Previous</button>
+  <button class="buttons">Next</button>
+  </div>
+  </div>
 
 </template>
 
 <script>
 import TheNav from '@/components/navbar/TheNav.vue'
 import Header from '@/components/navbar/Header.vue'
-import HeadD from '@/components/navbar/HeadD.vue'
+import UserDetails from '@/components/reusables/UserDetails.vue'
 
 import vue from 'vue'
 import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns'
@@ -93,7 +95,7 @@ export default vue.extend({
   components: {
     TheNav,
     Header,
-    HeadD
+    UserDetails
   },
   data: function () {
     return {
@@ -151,44 +153,34 @@ export default vue.extend({
 .nav {
 padding: 1px 9px 3px 1px;
 }
-/* .header {
-margin: 70px 20px;
-} */
+.userDetails{
+  margin: 8% 0 0 -80px;
+}
 .dropdown89 {
-position: absolute;
+display: flex;
+justify-content: space-between;
 height: 40px;
-left: 284px;
-right: 60px;
-top: 239px;
-width: 1096;
+margin: 40px 0 0 310px;
 }
 .feedbacks {
-position: absolute;
-width: 251px;
+width: 200px;
 height: 40px;
-left: 0px;
-top: 0px;
 background: #C0DAE3;
 border-radius: 5px 5px 0px 0px;
-border: 1px #00A4DB;
+border: 1px #00A4DB solid;
+box-sizing: border-box;
 }
 .responses {
-position: absolute;
-width: 251px;
+width: 200px;
 height: 40px;
-left: 300px;
-top: 0px;
 background: #C0DAE3;
 border-radius: 5px 5px 0px 0px;
-border: 1px #00A4DB;
+border: 1px #00A4DB solid;
 box-sizing: border-box;
 }
 .sort {
-position: absolute;
-width: 251px;
+width: 200px;
 height: 40px;
-left: 600px;
-top: 0px;
 background: #C0DAE3;
 border-radius: 5px 5px 0px 0px;
 border: 1px solid #00A4DB;
@@ -199,26 +191,22 @@ background: #C0DAE3;
 border: 1px solid #00A4DB;
 box-sizing: border-box;
 border-radius: 5px 5px 0px 0px;
-position: absolute;
-width: 251px;
+width: 200px;
 height: 40px;
-left: 900px;
-top: 0px;
 }
 .mainBody {
-position: absolute;
-width: 1096px;
+/* position: absolute; */
+/* width: 1096px; */
 height: 616px;
-left: 284px;
-top: 309px;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+margin: 0 0 0 23%;
+/* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 .survey {
 display: flex;
 justify-content: space-between;
 flex-direction: row;
 padding: 10px;
-width: 1139px;
+/* width: 1139px; */
 margin-left: -40px;
 }
 .firstBox {
@@ -233,6 +221,20 @@ background-color: rgba(181, 215, 227, 0.31);;
 li:first-child {
 background-color:#00A4DB;;
 }
+.survey {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #000000;
+}
+.next{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin: 0 0 0 50%;
+}
 .buttons {
 background-color: #00A4DB;
 border: 1px solid #FFFFFF;
@@ -244,15 +246,7 @@ font-weight: 500;
 font-size: 13px;
 line-height: 20px;
 color: #FFFFFF;
-margin: -10px 20px 30px 40px;
+margin: 0 2% 0 2%;
 padding: 5px 40px;
-}
-.survey {
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color: #000000;
 }
 </style>

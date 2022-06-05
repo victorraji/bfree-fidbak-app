@@ -51,8 +51,8 @@ color: #000000;
 /* color: red; */
 font-family: 'Poppins';
 font-style: normal;
-padding: 40px 40px 40px 10px;
-/* margin: 0 0 0 3px; */
+padding: 40px 40px 40px 0px;
+margin: 0 0 0 -130px;
 }
 .headerIcons {
 display: flex;

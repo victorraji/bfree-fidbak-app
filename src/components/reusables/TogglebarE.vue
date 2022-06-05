@@ -23,7 +23,7 @@ export default {
     top: 30%;
     height: 100%;
     width: 100%;
-    margin: 4% 0 2% 25%;
+    margin: 4% 0 2% 23%;
     .nps{
         height: 74px;
         width: 150px;

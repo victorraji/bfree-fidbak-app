@@ -4,9 +4,13 @@
           <Header/>
         </div>
         <TheNav/>
-        <UserDetails/>
-        <Feedbacks/>
-        <Notifications/>
+        <div class="details">
+          <UserDetails/>
+        </div>
+        <div class="feedback">
+          <Feedbacks/>
+          <Notifications/>
+        </div>
     </div>
 </template>
 
@@ -32,13 +36,19 @@ export default {
 
 <style scoped>
 *{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .container{
-    height: 1024px;
-    overflow: hidden;
-    background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
+  height: 1024px;
+  overflow: hidden;
+  background: linear-gradient(0deg, #F7F7F7, #F7F7F7), rgba(0, 164, 219, 0.32);
+}
+.details{
+  margin: 0 0 0 -77px;
+}
+.feedback{
+  margin: 0 0 0 -40px;
 }
 @media screen and (max-width: 1500px) {
   .container{

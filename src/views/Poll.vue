@@ -97,10 +97,10 @@ export default {
     background-color: $white;
 }
 .detail{
-    padding: 10% 0 0 0;
+    margin: 10% 0 0 -77px;
 }
 .toggle{
-    margin: 0 0 0 60px;
+    margin: 0 0 0 -60px;
 }
 .container{
     display: flex;

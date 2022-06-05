@@ -29,10 +29,10 @@ export default {
 @import "/scss/style.scss";
 .wrapper{
     height: 100vh;
-    width: 70%;
+    width: 75%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 3% 0 0 25%;
+    margin: 3% 0 0 23%;
     @media screen and (max-width: 1500px) {
         // height: 80vh;
         height: 120vh;

@@ -87,10 +87,10 @@ export default {
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 164, 219, 0.32);
 }
 .detail{
-    padding: 10% 0 0 0;
+    margin: 10% 0 0 -77px;
 }
 .toggle{
-    margin: 0 0 0 60px;
+    margin: 0 0 0 -40px;
 }
 .main-content{
     display: grid;
@@ -98,8 +98,7 @@ export default {
     width: 75.42vw;
     height: 130vh;
     top: 60%;
-    margin-left: 26%;
-    margin-bottom: 5%;
+    margin: 0 0 5% 23%;
     background-color: #F7F7F7;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25)
 }

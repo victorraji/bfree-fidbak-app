@@ -5,9 +5,9 @@
     <div class="detail">
         <UserDetailR/>
     </div>
-    <div class="toggle">
+    <!-- <div class="toggle"> -->
         <TogglebarE/>
-    </div>
+    <!-- </div> -->
     <div class="container">
         <div></div>
         <div></div>
