@@ -34,7 +34,6 @@
   width: 100%;
   margin: 0px;
   padding: 0px;
-  overflow: hidden;
 }
 .text-wrapper{
   display: grid;

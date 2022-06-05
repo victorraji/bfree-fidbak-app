@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
           <div class="logo">
-              <img src="../assets/bfreeLogo.svg" alt="fidbak logo">
-              <img src="../assets/fidbak.png" alt="">
+              <img src="../assets/logo.jpg" alt="fidbak logo">
+              <!-- <img src="../assets/fidbak.png" alt=""> -->
           </div>
           <div class="confirmation">
               <div class="textArea">
