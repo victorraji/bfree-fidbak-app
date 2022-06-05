@@ -19,8 +19,8 @@
 </ul>
 </div>
 <div class="btn1">
-<a href="/SignupR"><button class="button1">Sender</button></a>
-<a href="/Signup"><button class="button1">Receiver</button></a>
+<router-link to="/SignupR"><button class="button1">Sender</button></router-link>
+<router-link to="/Signup"><button class="button1">Receiver</button></router-link>
 </div>
 </div>
 <div class="lastP">
